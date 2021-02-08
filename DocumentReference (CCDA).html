@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)https://developer.allscripts.com/Content/fhir/content/DocumentReference/ -->
+<html lang="en" sigplusextliteextension-installed="true" class="gr__developer_allscripts_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">    
+    <title>DocumentReference (CCDA)</title>
+	<link rel="stylesheet" type="text/css" href="./DocumentReference (CCDA)_files/main.css">
+    <link rel="stylesheet" href="./DocumentReference (CCDA)_files/default.min.css">
+    <script src="./DocumentReference (CCDA)_files/highlight.min.js.download"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body data-gr-c-s-loaded="true">
+	<div class="right-sidebar">
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/">   Home</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/overview">   Overview</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Authentication_and_Authorization">   Authentication and Authorization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/patient">   Patient</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Condition">   Condition (Problem)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Immunization">   Immunization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationStatement">   MedicationStatement</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/AllergyIntolerance">   AllergyIntolerance</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/SmokingStatus">   SmokingStatus</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationOrder">   MedicationOrder</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Results">   Laboratory Result Observationss</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/VitalSigns">   VitalSign</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Procedure">   Procedure</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Assessment_and_plan">   Assessment and Plan of Treatment</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/CareTeam">   Care Team</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DiagnosticReport">   Laboratory Result DiagnosticReport</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Goal">   Goal</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Device">   Implantable Devices/UDI</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DocumentReference">   DocumentReference (CCDA)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HealthConcern">   Health Concern</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HowDoPatientsLogin">   How Do Patients Log In</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Developer_Signup">   Developer Signup</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/FHIR_Sandboxes">   Sandboxes</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Smart%20on%20FHIR">   SMART on FHIR</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/REST_and_HTTP_considerations">   REST and HTTP considerations</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Helpful_resources">   Helpful resources</a>
+ 			</div>
+    </div>
+
+   <div class="content">
+        <h1 id="reference-to-a-document">Reference to a document</h1>
+<h2 id="retrieving-a-patient-s-ccda-documents">Retrieving a patient’s CCDA documents</h2>
+<p>The logical ID of the patient to retrieve is passed as part of the URL.
+The logical ID is found as the result of a search.</p>
+<pre><code class="lang-bash hljs">GET https://tw171.open.allscripts.com/FHIR/Patient/id/DocumentReference
+GET https://tw171.open.allscripts.com/FHIR/Patient/id/DocumentReference?date=eq2016-01-01
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required?</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>yes</td>
+<td>URL</td>
+<td>The logical ID of the patient. This is retrieved using the search function.</td>
+</tr>
+<tr>
+<td>date</td>
+<td>no</td>
+<td>string</td>
+<td>A string representing a date to include in the search. See below for more information.</td>
+</tr>
+</tbody>
+</table>
+<p>A FHIR DocumentReference is returned.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Cardinality AAA</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>masterIdentifier</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Identifier" target="_blank">Identifier</a></td>
+<td>0..1</td>
+<td>Master Version Specific Identifier.</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Identifier" target="_blank">Identifier</a></td>
+<td>0..*</td>
+<td>Other identifiers for the document.</td>
+</tr>
+<tr>
+<td>subject</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>( <a href="https://www.hl7.org/fhir/Patient.html" target="_blank">Patient</a>)</td>
+<td>0..1</td>
+<td>Who/what is the subject of the document.</td>
+</tr>
+<tr>
+<td>type</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>1..1</td>
+<td>Kind of document. The value set includes content from LOINC. For more information on this value set, see <a href="http://hl7.org/fhir/valueset-c80-doc-typecodes.html" target="_blank">condition-code</a>.</td>
+</tr>
+<tr>
+<td>indexed</td>
+<td><a href="http://hl7.org/fhir/datatypes.html#instant" target="_blank">Instant</a></td>
+<td>1..1</td>
+<td>When this document reference was created</td>
+</tr>
+<tr>
+<td>status</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#code" target="_blank">code</a></td>
+<td>1..1</td>
+<td>Status of the document. Values include current, superseded, and entered-in-error. For more information on this value set, see <a href="http://hl7.org/fhir/valueset-document-reference-status.html" target="_blank">document-reference-status</a>.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>String</td>
+<td>0..1</td>
+<td>Human-readable description. The HTML version of the document.</td>
+</tr>
+<tr>
+<td>content</td>
+<td></td>
+<td>1..*</td>
+<td>Document referenced</td>
+</tr>
+<tr>
+<td>– content.attachment</td>
+<td><a href="http://hl7.org/fhir/datatypes.html#Attachment" target="_blank">attachment</a></td>
+<td>0..1</td>
+<td>Where/How to access the document. See below for more detail.</td>
+</tr>
+<tr>
+<td>– content. format</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#code" target="_blank">code</a></td>
+<td>0..1</td>
+<td>Format of the document. For more information on this value set, see <a href="http://hl7.org/fhir/valueset-formatcodes.html" target="_blank">formatcodes</a>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="searching-by-date">Searching by date</h3>
+<p>Dates are passed as query parameters on the URL. Since the URL parameters cannot handle comparators (for example, &gt;, &lt;=) these are passed in as part of the date.</p>
+<pre><code class="lang-javascript hljs">date=eq2016<span class="hljs-number">-01</span><span class="hljs-number">-01</span>
+date=gt2016<span class="hljs-number">-01</span><span class="hljs-number">-01</span>
+</code></pre>
+<p>The following comparators are supported:</p>
+<table>
+<thead>
+<tr>
+<th>Comparator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eq</td>
+<td>equal</td>
+</tr>
+<tr>
+<td>gt</td>
+<td>greater than</td>
+</tr>
+<tr>
+<td>ge</td>
+<td>greater than or equal</td>
+</tr>
+<tr>
+<td>lt</td>
+<td>less than</td>
+</tr>
+<tr>
+<td>le</td>
+<td>less than or equal</td>
+</tr>
+</tbody>
+</table>
+<p>To search for a date range, pass in the date twice.</p>
+<p>e.g. <code>date=ge2010-01-01&amp;date=le2010-12-31</code></p>
+<p>This search would include every day in the year 2010.</p>
+<h3 id="get-the-ccda-document">Get the CCDA document</h3>
+<p>The actual document is return as an attachment and can in the data element of the content.</p>
+<pre><code class="lang-javascript hljs"><span class="hljs-string">"content"</span>: [{<span class="hljs-string">"attachment"</span>:       {
+         <span class="hljs-string">"contentType"</span>: <span class="hljs-string">"application/hl7-sda+xml"</span>,
+         <span class="hljs-string">"language"</span>: <span class="hljs-string">"en-US"</span>,
+         <span class="hljs-string">"data"</span>: <span class="hljs-string">"PD94bWwtc3R5bGVzaGVldCB0eXBlPSJ0ZXh0L3h .... "</span>
+}}]
+</code></pre>
+<p>The CCDA is Base64 encoded.</p>
+
+    </div>
+
+
+</body></html>

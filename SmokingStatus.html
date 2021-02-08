@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)https://developer.allscripts.com/Content/fhir/content/SmokingStatus/ -->
+<html lang="en" class="gr__developer_allscripts_com" sigplusextliteextension-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">    
+    <title>SmokingStatus</title>
+	<link rel="stylesheet" type="text/css" href="./SmokingStatus_files/main.css">
+    <link rel="stylesheet" href="./SmokingStatus_files/default.min.css">
+    <script src="./SmokingStatus_files/highlight.min.js.download"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body data-gr-c-s-loaded="true">
+	<div class="right-sidebar">
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/">   Home</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/overview">   Overview</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Authentication_and_Authorization">   Authentication and Authorization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/patient">   Patient</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Condition">   Condition (Problem)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Immunization">   Immunization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationStatement">   MedicationStatement</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/AllergyIntolerance">   AllergyIntolerance</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/SmokingStatus">   SmokingStatus</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationOrder">   MedicationOrder</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Results">   Laboratory Result Observationss</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/VitalSigns">   VitalSign</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Procedure">   Procedure</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Assessment_and_plan">   Assessment and Plan of Treatment</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/CareTeam">   Care Team</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DiagnosticReport">   Laboratory Result DiagnosticReport</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Goal">   Goal</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Device">   Implantable Devices/UDI</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DocumentReference">   DocumentReference (CCDA)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HealthConcern">   Health Concern</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HowDoPatientsLogin">   How Do Patients Log In</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Developer_Signup">   Developer Signup</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/FHIR_Sandboxes">   Sandboxes</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Smart%20on%20FHIR">   SMART on FHIR</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/REST_and_HTTP_considerations">   REST and HTTP considerations</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Helpful_resources">   Helpful resources</a>
+ 			</div>
+    </div>
+
+   <div class="content">
+        <p>#Smoking status</p>
+<h2 id="retrieving-a-patient-s-observations">Retrieving a patient’s observations</h2>
+<p>The patient’s logical ID is passed as part of the URL.
+The logical ID is returned using the search function.</p>
+<pre><code class="lang-bash hljs">GET https://tw171.open.allscripts.com/FHIR/Patient/id/Observation?code=72166-2
+GET https://tw171.open.allscripts.comFHIR/Patient/id/Observation?code=72166-2&amp;date=eq2016-01-01
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required?</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>yes</td>
+<td>URL</td>
+<td>Patient’s logical ID. This is retrieved using the search function.</td>
+</tr>
+<tr>
+<td>date</td>
+<td>no</td>
+<td>string</td>
+<td>A string representing a date to include in the search.  See below for more information.</td>
+</tr>
+</tbody>
+</table>
+<p>Smoking status is returned in a DAF observation. The actual smoking status is returned in <em>valueCodeableConcept.</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>identifier</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Identifier" target="_blank"></a></td>
+<td>0..*</td>
+<td>Observation’s unique ID. This applies to the instance observation.</td>
+</tr>
+<tr>
+<td>status</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#code" target="_blank">code</a></td>
+<td>1..1</td>
+<td>Observation’s status. Values include Registered, Preliminary, Final, or Amended. For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/observation-status" target="_blank">observation-status</a>.</td>
+</tr>
+<tr>
+<td>category</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Observation’s type of classification. For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/observation-category" target="_blank">observation-category</a>.</td>
+</tr>
+<tr>
+<td>code</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>1..1</td>
+<td>Observation’s type or code. For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/observation-codes" target="_blank">observation-codes</a>.</td>
+</tr>
+<tr>
+<td>subject</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Patient.html" target="_blank">Patient</a>, <a href="https://www.hl7.org/fhir/Group.html" target="_blank">Group</a>, <a href="https://www.hl7.org/fhir/Device.html" target="_blank">Device</a>, <a href="https://www.hl7.org/fhir/Location.html" target="_blank">Location</a>)</td>
+<td>0..1</td>
+<td>Observation’s subject. The patient’s (or group of patients) location, or the device whose characteristics (direct or indirect) are described by the observation and into whose record the observation is placed.</td>
+</tr>
+<tr>
+<td>encounter</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Encounter.html" target="_blank">Encounter</a>)</td>
+<td>0..1</td>
+<td>Observation’s encounter. The healthcare event (a patient and healthcare provider interaction) during which the observation is made. For some observations it may be important to know the link between an observation and a particular encounter.</td>
+</tr>
+<tr>
+<td>effectiveDateTime</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#dateTime" target="_blank">dateTime</a></td>
+<td>0..1</td>
+<td>Clinically relevant time/time-period for observation.</td>
+</tr>
+<tr>
+<td>effectivePeriod</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Period" target="_blank">Period</a></td>
+<td>0..1</td>
+<td>Clinically relevant time/time-period for the observation. The time or time-period the observed value is asserted as being true. For biological subjects (human patients) this is usually called the “physiologically relevant time.” This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself.</td>
+</tr>
+<tr>
+<td>issued</td>
+<td>Hl7.Fhir.Model.Instant</td>
+<td>0..1</td>
+<td>Date/time the observation was made available. The date and time is typically after the results have been reviewed and verified.</td>
+</tr>
+<tr>
+<td>performer</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Practitioner.html" target="_blank">Practitioner</a>, <a href="https://www.hl7.org/fhir/Organization.html" target="_blank">Organization</a>, <a href="https://www.hl7.org/fhir/Patient.html" target="_blank">Patient</a>, <a href="https://www.hl7.org/fhir/RelatedPerson.html" target="_blank">RelatedPerson</a>)</td>
+<td>0..*</td>
+<td>Individual responsible for the observation.</td>
+</tr>
+<tr>
+<td>valueCodeableConcept</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>The smoking status. Need to track the status of individual results. Some results are finalized before the whole report is finalized. For more information on this value set, see <a href"http:="" hl7.org="" fhir="" daf="" valueset-daf-observation-ccdasmokingstatus.html"="" target="_blank">DAF Smoking Status Value Set</a>.</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>string</td>
+<td>0..1</td>
+<td>Comments about the result.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="searching-by-date">Searching by date</h3>
+<p>Dates are passed as query parameters on the URL. Since the URL parameters cannot handle comparators (for example, &gt;, &lt;=) these are passed in as part of the date.</p>
+<pre><code class="lang-javascript hljs">date=eq2016<span class="hljs-number">-01</span><span class="hljs-number">-01</span>
+date=gt2016<span class="hljs-number">-01</span><span class="hljs-number">-01</span>
+</code></pre>
+<p>The following comparators are supported:</p>
+<table>
+<thead>
+<tr>
+<th>Comparator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eq</td>
+<td>equal</td>
+</tr>
+<tr>
+<td>gt</td>
+<td>greater than</td>
+</tr>
+<tr>
+<td>ge</td>
+<td>greater than or equal</td>
+</tr>
+<tr>
+<td>lt</td>
+<td>less than</td>
+</tr>
+<tr>
+<td>le</td>
+<td>less than or equal</td>
+</tr>
+</tbody>
+</table>
+<p>To search for a date range, pass in the date twice.</p>
+<p>e.g. <code>date=ge2010-01-01&amp;date=le2010-12-31</code></p>
+<p>This search would include every day in the year 2010.</p>
+
+    </div>
+
+
+</body></html>

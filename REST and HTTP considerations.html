@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)https://developer.allscripts.com/Content/fhir/content/REST_and_HTTP_considerations/ -->
+<html lang="en" sigplusextliteextension-installed="true" class="gr__developer_allscripts_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">    
+    <title>REST and HTTP considerations</title>
+	<link rel="stylesheet" type="text/css" href="./REST and HTTP considerations_files/main.css">
+    <link rel="stylesheet" href="./REST and HTTP considerations_files/default.min.css">
+    <script src="./REST and HTTP considerations_files/highlight.min.js.download"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body data-gr-c-s-loaded="true">
+	<div class="right-sidebar">
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/">   Home</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/overview">   Overview</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Authentication_and_Authorization">   Authentication and Authorization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/patient">   Patient</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Condition">   Condition (Problem)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Immunization">   Immunization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationStatement">   MedicationStatement</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/AllergyIntolerance">   AllergyIntolerance</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/SmokingStatus">   SmokingStatus</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationOrder">   MedicationOrder</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Results">   Laboratory Result Observationss</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/VitalSigns">   VitalSign</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Procedure">   Procedure</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Assessment_and_plan">   Assessment and Plan of Treatment</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/CareTeam">   Care Team</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DiagnosticReport">   Laboratory Result DiagnosticReport</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Goal">   Goal</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Device">   Implantable Devices/UDI</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DocumentReference">   DocumentReference (CCDA)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HealthConcern">   Health Concern</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HowDoPatientsLogin">   How Do Patients Log In</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Developer_Signup">   Developer Signup</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/FHIR_Sandboxes">   Sandboxes</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Smart%20on%20FHIR">   SMART on FHIR</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/REST_and_HTTP_considerations">   REST and HTTP considerations</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Helpful_resources">   Helpful resources</a>
+ 			</div>
+    </div>
+
+   <div class="content">
+        <h1 id="considerations">Considerations</h1>
+<h2 id="verbs">Verbs</h2>
+<table>
+<thead>
+<tr>
+<th>Verb</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>Read the resource</td>
+</tr>
+</tbody>
+</table>
+<p>Future versions of the Allscripts FHIR API will support create and update.</p>
+<h2 id="http-response-codes">Http response codes</h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>The request was processed appropriately.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Invalid parameter.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>The request did not have a valid authorization token or none was provided. Obtain a valid authorization token and add it to the authorization header.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>The user is not authorized for the operation. The user may not have access to the patient, or an invalid scope was provided.</td>
+</tr>
+<tr>
+<td>4xx</td>
+<td>Authorization error.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="additional-error-information">Additional error information</h2>
+<p>A response with a code in the 4xx or 5xx may contain addtional information in the form of a <a href="https://www.hl7.org/fhir/operationoutcome.html" target="_blank">FHIR OperationOutcome</a>.</p>
+<p>For example:</p>
+<pre><code class="lang-javascript hljs">{
+  <span class="hljs-string">"resourceType"</span>: <span class="hljs-string">"OperationOutcome"</span>,
+  <span class="hljs-string">"id"</span>: <span class="hljs-string">"101"</span>,
+  <span class="hljs-string">"text"</span>: {
+    <span class="hljs-string">"status"</span>: <span class="hljs-string">"additional"</span>,
+    <span class="hljs-string">"div"</span>: <span class="hljs-string">"&lt;div&gt;\n      &lt;p&gt;W is not a recognized code for Gender.&lt;/p&gt;\n    &lt;/div&gt;"</span>
+  },
+  <span class="hljs-string">"issue"</span>: [
+    {
+      <span class="hljs-string">"severity"</span>: <span class="hljs-string">"error"</span>,
+      <span class="hljs-string">"code"</span>: <span class="hljs-string">"code-invalid"</span>,
+      <span class="hljs-string">"details"</span>: {
+        <span class="hljs-string">"text"</span>: <span class="hljs-string">"The code \"W\" is not known and not legal in this context"</span>
+      },
+      <span class="hljs-string">"diagnostics"</span>: <span class="hljs-string">"Acme.Interop.FHIRProcessors.Patient.processGender line 2453"</span>,
+      <span class="hljs-string">"location"</span>: [
+        <span class="hljs-string">"/f:Person/f:gender"</span>
+      ]
+    }
+  ]
+}
+</code></pre>
+
+    </div>
+
+
+</body></html>

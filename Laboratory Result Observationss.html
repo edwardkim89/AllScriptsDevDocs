@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://developer.allscripts.com/Content/fhir/content/Results/ -->
+<html lang="en" sigplusextliteextension-installed="true" class="gr__developer_allscripts_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">    
+    <title>Laboratory Result Observationss</title>
+	<link rel="stylesheet" type="text/css" href="./Laboratory Result Observationss_files/main.css">
+    <link rel="stylesheet" href="./Laboratory Result Observationss_files/default.min.css">
+    <script src="./Laboratory Result Observationss_files/highlight.min.js.download"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body data-gr-c-s-loaded="true">
+	<div class="right-sidebar">
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/">   Home</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/overview">   Overview</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Authentication_and_Authorization">   Authentication and Authorization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/patient">   Patient</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Condition">   Condition (Problem)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Immunization">   Immunization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationStatement">   MedicationStatement</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/AllergyIntolerance">   AllergyIntolerance</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/SmokingStatus">   SmokingStatus</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationOrder">   MedicationOrder</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Results">   Laboratory Result Observationss</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/VitalSigns">   VitalSign</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Procedure">   Procedure</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Assessment_and_plan">   Assessment and Plan of Treatment</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/CareTeam">   Care Team</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DiagnosticReport">   Laboratory Result DiagnosticReport</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Goal">   Goal</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Device">   Implantable Devices/UDI</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DocumentReference">   DocumentReference (CCDA)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HealthConcern">   Health Concern</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HowDoPatientsLogin">   How Do Patients Log In</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Developer_Signup">   Developer Signup</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/FHIR_Sandboxes">   Sandboxes</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Smart%20on%20FHIR">   SMART on FHIR</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/REST_and_HTTP_considerations">   REST and HTTP considerations</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Helpful_resources">   Helpful resources</a>
+ 			</div>
+    </div>
+
+   <div class="content">
+        <h1 id="measurements-and-simple-assertions">Measurements and simple assertions</h1>
+<h2 id="retrieving-a-patient-s-laboratory-result-observations">Retrieving  a patient’s laboratory result observations</h2>
+<p>The logical ID (of the patient to retrieve) is passed as part of the URL. 
+The logical ID is found as the result of a search.</p>
+<pre><code class="lang-bash hljs">GET https://tw171.open.allscripts.com/FHIR/Patient/id/Observation?category=laboratory
+GET hhttps://tw171.open.allscripts.com/FHIR/Patient/id/Observation?category=laboratory&amp;date=eq2016-01-01
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required?</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>yes</td>
+<td>URL</td>
+<td>The logical ID of the patient. This is retrieved using the search function.</td>
+</tr>
+<tr>
+<td>date</td>
+<td>no</td>
+<td>string</td>
+<td>A string representing a date to include in the search. See below for more information.</td>
+</tr>
+</tbody>
+</table>
+<p>A DAF Observation is returned.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>identifier</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Identifier" target="_blank"></a></td>
+<td>0..*</td>
+<td>Unique identifier for the simple observation instance. This allows observations to be distinguished and referenced. If this is used, then the attributes associated to identifier are required (use, system, value); External ID- is for a lab vendor who sends the results such that this be the ID that they send.</td>
+</tr>
+<tr>
+<td>— use</td>
+<td><a href="https://www.hl7.org/fhir/valueset-identifier-use.html#Use" target="blank"></a></td>
+<td>1..1</td>
+<td>Purpose of this identifier. Identifies the purpose for this identifier, if known. The codes shall be taken from IdentifierUse. Allows the appropriate identifier for a particular context of use to be selected from among a set of identifiers. Note: This is labeled as “Is Modifier” because applications should not mistake a temporary ID for a permanent one. Applications can assume that an identifier is permanent unless it explicitly says that it is temporary. This value set has an inline code system which defines the following codes: Usual, Official, Temp, and Secondary. For more information on this value set, see http://hl7.org/fhir/identifier-use.</td>
+</tr>
+<tr>
+<td>— system</td>
+<td><a href="https://www.hl7.org/fhir/daf/daf-resultobs-definitions.html#System" target="blank"></a></td>
+<td>1..1</td>
+<td>System attribute establishes the namespace in which set of possible ID values is unique. There are many sequences of identifiers. To perform matching, we need to know what sequence we’re dealing with. The system identifies a particular sequence or set of unique identifiers. For example, http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the Identifier.value itself is a full URI, Uniform Resource Identifier Reference (RFC 3986 ). Note: URIs are case sensitive. For UUID (urn:uuid:53fefa32-fcbb-4ff8-8a92-55ee120877b7) use all lowercase.</td>
+</tr>
+<tr>
+<td>— value</td>
+<td>http://www.hl7.org/fhir/daf/daf-resultobs-definitions.html#daf-resultobs.Observation.identifier.value</td>
+<td>1..1</td>
+<td>Portion of the identifier typically displayed to the user and which is unique within the context of the system. If the value is a full URI, then the system shall be urn:ietf:rfc:3986.  For example: 123456.</td>
+</tr>
+<tr>
+<td>status</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#code" target="_blank">code</a></td>
+<td>1..1</td>
+<td>Status of the result value or codes providing the status of an observation. The codes shall be taken from ObservationStatus value set and are used to track the status of individual results as some results are finalized before the whole report is finalized. This value set has an inline code system which defines the following codes: Registered , Preliminary , Final , Amended, Cancelled, Entered in Error, and Unknown. For more information on this value set, see: <a href="http://hl7.org/fhir/observation-status">http://hl7.org/fhir/observation-status</a>.</td>
+</tr>
+<tr>
+<td>category</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>1..1</td>
+<td>Fixed category.coding.system that includes several options as to where the observation could have been made such as Social History, Vital Signs, Imaging, Laboratory, Procedure, Survey, Exam and Therapy. For the Lab Results profile, the category is a fixed cateogry.coding.code for Laboratory. For more information on this value set, see: =”<a href="http://hl7.org/fhir/observation-category">http://hl7.org/fhir/observation-category</a>“.</td>
+</tr>
+<tr>
+<td>code</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>1..1</td>
+<td>Code refers to the test that was performed. This is element is bound to LOINC codes (US Laboratory Observation Profile Observation Name Codes) and the conformance is extensible such that, if the data type is a CodeableConcept, then one of the coding values shall be from the specified value set if a code applies, but if no suitable code exists in the value set, alternate code(s) may be provided in its place. If no codes, including local codes, are available, then just text may be used.  For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/observation-codes">http://hl7.org/fhir/ValueSet/observation-codes</a>.</td>
+</tr>
+<tr>
+<td>— coding</td>
+<td><a href="http://www.hl7.org/fhir/daf/daf-resultobs-definitions.html#daf-resultobs.Observation.code.coding">http://www.hl7.org/fhir/daf/daf-resultobs-definitions.html#daf-resultobs.Observation.code.coding</a></td>
+<td>1..1</td>
+<td>Standard and local codes may be included here by repeating the coding element with a different coding.system. Requirements allow for translations and alternate encodings within a code system. This also supports communication of the same instance to systems requiring different encodings. NOTE: Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT. See the HL7 v3 Core Principles for more information. Ordering of codings is undefined and shall not be used to infer meaning. Generally, at most only one of the coding values will be labelled as UserSelected = true.</td>
+</tr>
+<tr>
+<td>subject</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Patient.html" target="_blank">Patient</a>, <a href="https://www.hl7.org/fhir/Group.html" target="_blank">Group</a>, <a href="https://www.hl7.org/fhir/Device.html" target="_blank">Device</a>, <a href="https://www.hl7.org/fhir/Location.html" target="_blank">Location</a>)</td>
+<td>1..1</td>
+<td>Patient, or group of patients, location, or device whose characteristics (direct or indirect) are described by the observation and into whose record the observation is placed. Comments: Indirect characteristics may be those of a specimen, fetus, donor, other observer (for example a relative or EMT), or any observation made about the subject. One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation shall be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated. If the target of the observation is different than the subject, the general extension observation-focal-subject. may be used. However, the distinction between the patient’s own value for an observation versus that of the fetus, or the donor or blood product unit, etc., are often specified in the observation code.</td>
+</tr>
+<tr>
+<td>encounter</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Encounter.html" target="_blank">Encounter</a>)</td>
+<td>0..1</td>
+<td>Healthcare event (such as a patient and healthcare provider interaction) during which this observation is made. For some observations it may be important to know the link between an observation and a particular encounter.</td>
+</tr>
+<tr>
+<td>effectiveDateTime</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#dateTime" target="_blank">dateTime</a></td>
+<td>0..1</td>
+<td>For lab tests this is the specimen collection date. For Ask at Order Entry Questions (AOE)’s this is the date the question was asked.</td>
+</tr>
+<tr>
+<td>effectivePeriod</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Period" target="_blank">Period</a></td>
+<td>0..1</td>
+<td>For lab tests this is the specimen collection period. At least a date should be present unless this observation is a historical report.</td>
+</tr>
+<tr>
+<td>issued</td>
+<td>Hl7.Fhir.Model.Instant</td>
+<td>0..1</td>
+<td>Date and time this observation was made available to providers, typically after the results have been reviewed and verified. Minimum Precision to Day and updated when the result is updated.</td>
+</tr>
+<tr>
+<td>performer</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Practitioner.html" target="_blank">Practitioner</a>, <a href="https://www.hl7.org/fhir/Organization.html" target="_blank">Organization</a>, <a href="https://www.hl7.org/fhir/Patient.html" target="_blank">Patient</a>, <a href="https://www.hl7.org/fhir/RelatedPerson.html" target="_blank">RelatedPerson</a>)</td>
+<td>0..*</td>
+<td>Who was responsible for asserting the observed value as “true”. May give a degree of confidence in the observation and also indicates where follow-up questions should be directed.</td>
+</tr>
+<tr>
+<td>valueQuantity</td>
+<td>Quantity</td>
+<td>0..1</td>
+<td>An observation exists to have a value, though it may not if it is in error, or it represents a group of observations. Quantity is a measured amount (or an amount that can potentially be measured). The value contains the numerical value of the quantity, including an implicit precision. If no comparator is specified, the value is a point value (i.e. ‘=’). The comparator element can never be ignored.</td>
+</tr>
+<tr>
+<td>valueCodeableConcept</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Actual result. If codeableConcept, valueCodeableConcept must be selected from SNOMED CT.</td>
+</tr>
+<tr>
+<td>valueString</td>
+<td>String</td>
+<td>0..1</td>
+<td>Actual result in the form of a sequence of Unicode characters. Note that strings shall not exceed 1MB in size.</td>
+</tr>
+<tr>
+<td>valueRange</td>
+<td>Hl7.Fhir.Model.Range</td>
+<td>0..1</td>
+<td>Range is a set of ordered Quantity values defined by a low and high limit. A Range specifies a set of possible values; usually, one value from the range applies (e.g. “give the patient between 2 and 4 tablets”). Ranges are typically used in instructions. The unit and code/system elements of the low or high elements shall match. If the low or high elements are missing, the meaning is that the low or high boundaries are not known and therefore neither is the complete range.</td>
+</tr>
+<tr>
+<td>valueRatio</td>
+<td>Hl7.Fhir.Model.Ratio</td>
+<td>0..1</td>
+<td>Relationship between two Quantity values expressed as a numerator and a denominator. Common factors in the numerator and denominator are not automatically cancelled out. The Ratio data type is used for titers (e.g. “1:128”) and other quantities produced by laboratories that truly represent ratios. Ratios are not simply “structured numbers” - for example blood pressure measurements (e.g. “120/60”) are not ratios. In addition, ratios are used where common factors in the numerator and denominator do not cancel out.</td>
+</tr>
+<tr>
+<td>valueSampledData</td>
+<td>Hl7.Fhir.Model.SampledData</td>
+<td>0..1</td>
+<td>Data that comes from a series of measurements taken by a device, with upper and lower limits. There may be more than one dimension in the data. A SampledData provides a concise way to handle the data produced by devices that sample a physical particular state at a high frequency. A typical use for this is for the output of an ECG or EKG device.</td>
+</tr>
+<tr>
+<td>valueAttachment</td>
+<td>Hl7.Fhir.Model.Attachment</td>
+<td>0..1</td>
+<td>Type is for containing or referencing attachments - additional data content defined in other formats. The most common use of this type is to include images or reports in some report format such as PDF. However it can be used for any data that has a MIME type. The actual content of an Attachment can be conveyed directly using the data element or a URL reference can be provided. If both are provided, the reference shall point to the same content as found in the data. The reference can never be reused to point to some different data (i.e. the reference is version specific). The URL reference shall point to a location that resolves to actual data; some URIs such as cid: meet this requirement. If the URL is a relative reference, it is interpreted in the same way as a resource reference.</td>
+</tr>
+<tr>
+<td>valueTime</td>
+<td>Time</td>
+<td>0..1</td>
+<td>Time during the day, with no date specified (can be converted to a Duration since midnight). Seconds must be provided due to schema type constraints but may be zero-filled and may be ignored. The time “24:00” is not allowed, and neither is a time zone.</td>
+</tr>
+<tr>
+<td>valueDateTime</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#dateTime" target="_blank">dateTime</a></td>
+<td>0..1</td>
+<td>Date, date-time or partial date (e.g. just year or year + month) as used in human communication. If hours and minutes are specified, a time zone shall be populated. Seconds must be provided due to schema type constraints but may be zero-filled and may be ignored. Dates shall be valid dates. The time “24:00” is not allowed.</td>
+</tr>
+<tr>
+<td>valuePeriod</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Period" target="_blank">Period</a></td>
+<td>0..1</td>
+<td>Time period defined by a start and end date/time. A period specifies a range of times. The context of use will specify whether the entire range applies (e.g. “the patient was an inpatient of the hospital for this time range”) or one value from the period applies (e.g. “give to the patient between 2 and 4 pm on 24-Jun 2013”).</td>
+</tr>
+<tr>
+<td>dataAbsentReason</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Provides a reason why the expected value in the element Observation.value[x] is missing. Codes specifying why the result (Observation.value[x]) is missing. The codes shall be taken from Observation Value Absent Reason value set and include: Unknown, Asked, Temp, Not Asked, Masked, Unsupported, As Text, Error, and Not a Number. Other codes may be used where these codes are not suitable. For more information on this value set, see: <a href="http://hl7.org/fhir/ValueSet/observation-valueabsentreason">http://hl7.org/fhir/ValueSet/observation-valueabsentreason</a>.</td>
+</tr>
+<tr>
+<td>interpretation</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Assessment made based on the result of the observation. Intended as a simple compact code often placed adjacent to the result value in reports and flow sheets to signal the meaning/normalcy status of the result. The codes shall be taken from Observation Value Absent Reason value set and include: High, Low, Normal, and so forth.  For more information on this value set, see: <a href="http://hl7.org/fhir/ValueSet/observation-interpretation">http://hl7.org/fhir/ValueSet/observation-interpretation</a>.</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>string</td>
+<td>0..1</td>
+<td>May include statements about significant, unexpected or unreliable values, or information about the source of the value where this may be relevant to the interpretation of the result.</td>
+</tr>
+<tr>
+<td>bodySite</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Site on the subject’s body where the observation was made (i.e. the target site).  Codes describing anatomical locations. May include laterality.  Only used if not implicit in code found in Observation.code. For example codes, see the SNOMED CT Body Structures value set: <a href="http://www.hl7.org/fhir/valueset-body-site.html">http://www.hl7.org/fhir/valueset-body-site.html</a> . If the use case requires BodySite to be handled as a separate resource instead of an inline coded element (for example, to identify and track separately) then use the standard extension body-site-instance extension: <a href="http://www.hl7.org/fhir/extension-body-site-instance.html">http://www.hl7.org/fhir/extension-body-site-instance.html</a>.</td>
+</tr>
+<tr>
+<td>method</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Mechanism used to perform the observation. In some cases, method can impact results and is thus used for determining whether results can be compared or determining significance of results. For more information on the Observation Method value set, see: <a href="http://hl7.org/fhir/ValueSet/observation-methods">http://hl7.org/fhir/ValueSet/observation-methods</a>.</td>
+</tr>
+<tr>
+<td>specimen</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Specimen.html" target="_blank">Specimen</a>)</td>
+<td>0..1</td>
+<td>Specimen that was used when this observation was made. Observations are not made on specimens themselves; they are made on a subject, but usually by the means of a specimen. Note that although specimens are often involved, they are not always tracked and reported explicitly. Also note that observation resources may be used in contexts that track the specimen explicitly (for example, a Diagnostic Report).</td>
+</tr>
+<tr>
+<td>referenceRange</td>
+<td></td>
+<td>0..*</td>
+<td>Guidance on how to interpret the value by comparison to a normal or recommended range. Knowing what values are considered “normal” can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.  Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g. specific to the patient’s age, gender, weight and other factors), but this may not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.</td>
+</tr>
+<tr>
+<td>– referenceRange.low</td>
+<td>Hl7.Fhir.Model.SimpleQuantity</td>
+<td>0..1</td>
+<td>Low range, if relevant. The value of the low bound of the reference range. The low bound of the reference range endpoint is inclusive of the value (e.g. reference range is &gt;=5 - &lt;=9). If the low bound is omitted, it is assumed to be meaningless (e.g. reference range is &lt;=2.3).</td>
+</tr>
+<tr>
+<td>– referenceRange.high</td>
+<td>Hl7.Fhir.Model.SimpleQuantity</td>
+<td>0..1</td>
+<td>High range, if relevant. The value of the high bound of the reference range. The high bound of the reference range endpoint is inclusive of the value (e.g. reference range is &gt;=5 - &lt;=9). If the high bound is omitted, it is assumed to be meaningless (e.g. reference range is &gt;= 2.3).</td>
+</tr>
+<tr>
+<td>– referenceRange.meaning</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Meaning/use of this range of this range.  For more information on this value set, see: <a href="http://hl7.org/fhir/ValueSet/referencerange-meaning">http://hl7.org/fhir/ValueSet/referencerange-meaning</a>.</td>
+</tr>
+<tr>
+<td>– referenceRange.age</td>
+<td>Hl7.Fhir.Model.Range</td>
+<td>0..1</td>
+<td>Applicable age range, if relevant. The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.</td>
+</tr>
+<tr>
+<td>– referenceRange.text</td>
+<td>string</td>
+<td>0..1</td>
+<td>Text based reference range in an observation which may be used when a quantitative range is not appropriate for an observation. An example would be a reference value of “Negative” or a list or table of ‘normals’.</td>
+</tr>
+<tr>
+<td>related</td>
+<td></td>
+<td>0..*</td>
+<td>Set of related observations that together form the panel or battery of this observation. Normally, an observation will have either a value or a set of related observations. A few observations (e.g. Apgar score) may have both a value and a set of related observations or sometimes QuestionnaireResponse from which the measure is derived.</td>
+</tr>
+<tr>
+<td>– related.type</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#code" target="_blank">code</a></td>
+<td>1..1</td>
+<td>Code specifying the kind of relationship that exists with the target resource. The codes shall be taken from the ObservationRelationshipType value set and include: Has-member, Derived-from, Sequel-to, Replaces, Qualified-by, and Interfered-by.  For more information on this value set, see: <a href="http://hl7.org/fhir/ValueSet/observation-relationshiptypes">http://hl7.org/fhir/ValueSet/observation-relationshiptypes</a>.</td>
+</tr>
+<tr>
+<td>– related.target</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Observation.html" target="_blank">Observation</a>, <a href="https://www.hl7.org/fhir/QuestionnaireResponse.html" target="_blank">QuestionnaireResponse</a>)</td>
+<td>1..1</td>
+<td>Resource (US DAF Component observations) that is related to this one.</td>
+</tr>
+<tr>
+<td>component</td>
+<td></td>
+<td>0..*</td>
+<td>Some observations have multiple component observations. These component observations are expressed as separate code value pairs that share the same attributes. Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations. Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable). However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.</td>
+</tr>
+<tr>
+<td>– component.code</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>1..1</td>
+<td>Laboratory test that was performed. This is element and codes are bound to LOINC (US Laboratory Observation Profile Observation Name Codes); however, other codes may be used where these codes are not suitable. For more information on this value set, see: <a href="http://hl7.org/fhir/ValueSet/observation-codes">http://hl7.org/fhir/ValueSet/observation-codes</a>.</td>
+</tr>
+<tr>
+<td>Observation.component.value[x]</td>
+<td><a href="http://www.hl7.org/fhir/daf/daf-resultobs-definitions.html#daf-resultobs.Observation.component.value[x">http://www.hl7.org/fhir/daf/daf-resultobs-definitions.html#daf-resultobs.Observation.component.value[x</a>]</td>
+<td>0..1</td>
+<td>Information determined as a result of making the observation, if the information has a simple value. Choice of: Quantity, CodeableConcept, string, Range, Ratio, SampledData, Attachment, time, dateTime, Period. Normally, an observation will have either a value or a set of related observations. A few observations (e.g. Apgar score) may have both a value and related observations (for an Apgar score, the observations from which the measure is derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value. For boolean values use valueCodeableConcept and select codes from <a href="http://hl7.org/fhir/ValueSet/v2-0136">http://hl7.org/fhir/ValueSet/v2-0136</a> (These “yes/no” concepts can be mapped to the display name “true/false” or other mutually exclusive terms that may be needed”). The element, Observation.value[x], has a variable name depending on the type as follows: valueQuantity, valueCodeableConcept, valueRatio, valueChoice, valuePeriod, valueSampleData, or valueString (The name format is “‘value’ + the type name” with a capital on the first letter of the type).</td>
+</tr>
+<tr>
+<td>– component.valueQuantity</td>
+<td>Quantity</td>
+<td>0..1</td>
+<td>Actual component result or a measured amount (or an amount that can potentially be measured). The value contains the numerical value of the quantity, including an implicit precision. If no comparator is specified, the value is a point value (i.e. ‘=’). The comparator element can never be ignored.</td>
+</tr>
+<tr>
+<td>– component.valueCodeableConcept</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Actual component result.</td>
+</tr>
+<tr>
+<td>– component.valueString</td>
+<td>String</td>
+<td>0..1</td>
+<td>Actual component result.</td>
+</tr>
+<tr>
+<td>– component.valueRange</td>
+<td>Hl7.Fhir.Model.Range</td>
+<td>0..1</td>
+<td>Set of ordered Quantity values defined by a low and high limit. A Range specifies a set of possible values; usually, one value from the range applies (e.g. “give the patient between 2 and 4 tablets”). Ranges are typically used in instructions. The unit and code/system elements of the low or high elements shall match. If the low or high elements are missing, the meaning is that the low or high boundaries are not known and therefore neither is the complete range. The low and the high values are inclusive, and are assumed to have arbitrarily high precision; e.g. the range 1.5 to 2.5 includes 1.50, and 2.50 but not 1.49 or 2.51.</td>
+</tr>
+<tr>
+<td>– component.valueRatio</td>
+<td>Hl7.Fhir.Model.Ratio</td>
+<td>0..1</td>
+<td>Relationship between two Quantity values expressed as a numerator and a denominator. Common factors in the numerator and denominator are not automatically cancelled out. The Ratio data type is used for titers (e.g. “1:128”) and other quantities produced by laboratories that truly represent ratios. Ratios are not simply “structured numbers” - for example blood pressure measurements (e.g. “120/60”) are not ratios. In addition, ratios are used where common factors in the numerator and denominator do not cancel out. A proper ratio has both a numerator and a denominator; however these are not mandatory in order to allow an invalid ratio with an extension with further information.</td>
+</tr>
+<tr>
+<td>– component.valueSampledData</td>
+<td>Hl7.Fhir.Model.SampledData</td>
+<td>0..1</td>
+<td>Data that comes from a series of measurements taken by a device, with upper and lower limits. There may be more than one dimension in the data. A SampledData provides a concise way to handle the data produced by devices that sample a physical particular state at a high frequency. A typical use for this is for the output of an ECG or EKG device.</td>
+</tr>
+<tr>
+<td>– component.valueAttachment</td>
+<td>Hl7.Fhir.Model.Attachment</td>
+<td>0..1</td>
+<td>Type for containing or referencing attachments - additional data content defined in other formats. The most common use of this type is to include images or reports in some report format such as PDF. However it can be used for any data that has a MIME type.</td>
+</tr>
+<tr>
+<td>– component.valueTime</td>
+<td>Time</td>
+<td>0..1</td>
+<td>Time during the day, with no date specified (can be converted to a Duration since midnight). Seconds must be provided due to schema type constraints but may be zero-filled and may be ignored. The time “24:00” is not allowed, and neither is a time zone.</td>
+</tr>
+<tr>
+<td>– component.valueDateTime</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#dateTime" target="_blank">dateTime</a></td>
+<td>0..1</td>
+<td>Date, date-time or partial date (e.g. just year or year + month) as used in human communication. If hours and minutes are specified, a time zone shall be populated. Seconds must be provided due to schema type constraints but may be zero-filled and may be ignored. Dates shall be valid dates. The time “24:00” is not allowed.</td>
+</tr>
+<tr>
+<td>– component.valuePeriod</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Period" target="_blank">Period</a></td>
+<td>0..1</td>
+<td>Time period defined by a start and end date/time. A period specifies a range of times. The context of use will specify whether the entire range applies (e.g. “the patient was an inpatient of the hospital for this time range”) or one value from the period applies (e.g. “give to the patient between 2 and 4 pm on 24-Jun 2013”). If the start element is missing, the start of the period is not known. If the end element is missing, it means that the period is ongoing, or the start may be in the past, and the end date in the future, which means that period is expected/planned to end at the specified time. The end value includes any matching date/time. For example, the period 2011-05-23 to 2011-05-27 includes all the times from the start of the 23rd May through to the end of the 27th of May.</td>
+</tr>
+<tr>
+<td>– component.dataAbsentReason</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Reason why the expected value in the element Observation.value[x] is missing. The codes shall be taken from the ObservationValueAbsentReason value set and include the following 9 values: Unknown, Asked, Temp, Not Asked, Masked, Unsupported, As Text, Error, Not a Number. For more information on this value set, see: <a href="http://hl7.org/fhir/ValueSet/observation-valueabsentreason">http://hl7.org/fhir/ValueSet/observation-valueabsentreason</a>.</td>
+</tr>
+<tr>
+<td>– component.referenceRange</td>
+<td></td>
+<td>0..*</td>
+<td>Guidance on how to interpret the value by comparison to a normal or recommended range. Knowing what values are considered “normal” can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts. Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g. specific to the patient’s age, gender, weight and other factors), but this may not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="searching-by-date">Searching by date</h3>
+<p>Dates are passed as query parameters on the URL. Since the URL parameters cannot handle comparators (for example, &gt;, &lt;=) these are passed as part of the date.</p>
+<pre><code class="lang-javascript hljs">date=eq2016<span class="hljs-number">-01</span><span class="hljs-number">-01</span>
+date=gt2016<span class="hljs-number">-01</span><span class="hljs-number">-01</span>
+</code></pre>
+<p>The following comparators are supported:</p>
+<table>
+<thead>
+<tr>
+<th>Comparator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eq</td>
+<td>equal</td>
+</tr>
+<tr>
+<td>gt</td>
+<td>greater than</td>
+</tr>
+<tr>
+<td>ge</td>
+<td>greater than or equal</td>
+</tr>
+<tr>
+<td>lt</td>
+<td>less than</td>
+</tr>
+<tr>
+<td>le</td>
+<td>less than or equal</td>
+</tr>
+</tbody>
+</table>
+<p>To search for a date range, pass in the date twice.</p>
+<p>e.g. <code>date=ge2010-01-01&amp;date=le2010-12-31</code></p>
+<p>This search would include every day in the year 2010.</p>
+
+    </div>
+
+
+</body></html>

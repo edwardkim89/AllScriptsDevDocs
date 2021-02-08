@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)https://developer.allscripts.com/Content/fhir/content/VitalSigns/ -->
+<html lang="en" sigplusextliteextension-installed="true" class="gr__developer_allscripts_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">    
+    <title>VitalSign</title>
+	<link rel="stylesheet" type="text/css" href="./VitalSign_files/main.css">
+    <link rel="stylesheet" href="./VitalSign_files/default.min.css">
+    <script src="./VitalSign_files/highlight.min.js.download"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body data-gr-c-s-loaded="true">
+	<div class="right-sidebar">
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/">   Home</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/overview">   Overview</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Authentication_and_Authorization">   Authentication and Authorization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/patient">   Patient</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Condition">   Condition (Problem)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Immunization">   Immunization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationStatement">   MedicationStatement</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/AllergyIntolerance">   AllergyIntolerance</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/SmokingStatus">   SmokingStatus</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationOrder">   MedicationOrder</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Results">   Laboratory Result Observationss</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/VitalSigns">   VitalSign</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Procedure">   Procedure</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Assessment_and_plan">   Assessment and Plan of Treatment</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/CareTeam">   Care Team</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DiagnosticReport">   Laboratory Result DiagnosticReport</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Goal">   Goal</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Device">   Implantable Devices/UDI</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DocumentReference">   DocumentReference (CCDA)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HealthConcern">   Health Concern</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HowDoPatientsLogin">   How Do Patients Log In</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Developer_Signup">   Developer Signup</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/FHIR_Sandboxes">   Sandboxes</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Smart%20on%20FHIR">   SMART on FHIR</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/REST_and_HTTP_considerations">   REST and HTTP considerations</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Helpful_resources">   Helpful resources</a>
+ 			</div>
+    </div>
+
+   <div class="content">
+        <h1 id="measurements-and-simple-assertions">Measurements and simple assertions</h1>
+<h2 id="retrieving-a-patient-s-vital-signs">Retrieving a patient’s vital signs</h2>
+<p>The logical ID (of the patient to retrieve) is passed as part of the URL.
+The logical ID is found as the result of a search.</p>
+<pre><code class="lang-bash hljs">GET https://tw171.open.allscripts.com/FHIR/Patient/id/Observation?category=vital-signs
+GET https://tw171.open.allscripts.comFHIR/Patient/id/Observation?category=vital-signs&amp;date=eq2016-01-01
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required?</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>yes</td>
+<td>URL</td>
+<td>The logical ID of the patient. This is retrieved using the search function.</td>
+</tr>
+<tr>
+<td>date</td>
+<td>no</td>
+<td>string</td>
+<td>A string representing a date to include in the search.  See below for more information.</td>
+</tr>
+</tbody>
+</table>
+<p>A DAF Observation is returned.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>identifier</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Identifier" target="_blank"></a></td>
+<td>0..*</td>
+<td>Unique identifier for the simple observation instance. Allows observations to be distinguished and referenced.</td>
+</tr>
+<tr>
+<td>status</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#code" target="_blank">code</a></td>
+<td>1..1</td>
+<td>Status of the vital sign result value. The status of individual results needs to be tracked. Some results are finalized before the whole report is finalized.  The conformance on this value set is required. Values include: Registered, Preliminary, Final, Amended, Cancelled, Entered in Error, and Unknown. For more information on this value set, see: <a href="http://hl7.org/fhir/ValueSet/observation-status">http://hl7.org/fhir/ValueSet/observation-status</a>.</td>
+</tr>
+<tr>
+<td>category</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Classification of  type of observation. Clinical observations measure the body’s basic functions such as such as blood pressure, heart rate, respiratory rate, height, weight, body mass index, head circumference, pulse oximetry, temperature, and body surface area.  For more information on this value set, see: <a href="http://hl7.org/fhir/ValueSet/observation-category">http://hl7.org/fhir/ValueSet/observation-category</a>.</td>
+</tr>
+<tr>
+<td>code</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>1..1</td>
+<td>Vital sign result type. Coded responses are from C-CDA Vital Sign Results. 1. Shall contain exactly one [1..1] code, where the @code should be selected from ValueSet HITSP Vital Sign Result Type. This value set indicates the allowed vital sign result types. The vocabulary selected for this value set aligns with requirements in the Meaningful Use (MU) Stage 2. Note the concept Blood pressure systolic and diastolic (55284-4) is used to group the related observations Systolic blood pressure (8480-6) and Diastolic blood pressure (8462-4). It shall not be used alone, but both 8480-6 and 8462-2 shall also be valued. The codes shall be taken from C-CDA Vital Sign Result; other codes may be used where these codes are not suitable.  For more information on this value set, see: <a href="http://hl7.org/fhir/ValueSet/observation-codes">http://hl7.org/fhir/ValueSet/observation-codes</a>.</td>
+</tr>
+<tr>
+<td>subject</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Patient.html" target="_blank">Patient</a>, <a href="https://www.hl7.org/fhir/Group.html" target="_blank">Group</a>, <a href="https://www.hl7.org/fhir/Device.html" target="_blank">Device</a>, <a href="https://www.hl7.org/fhir/Location.html" target="_blank">Location</a>)</td>
+<td>0..1</td>
+<td>Who and/or what this vital is for. The patient, or group of patients, location, or device whose characteristics (direct or indirect) are described by the observation and into whose record the observation is placed. Indirect characteristics may be those of a specimen, fetus, donor, other observer (for example a relative or EMT), or any observation made about the subject.  Observations have no value if you don’t know who or what they’re about. Note: One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation shall be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated.</td>
+</tr>
+<tr>
+<td>encounter</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Encounter.html" target="_blank">Encounter</a>)</td>
+<td>0..1</td>
+<td>The healthcare event (for example, a patient and healthcare provider interaction) during which this vital was obtained.  For some observations it may be important to know the link between the vital sign and a particular encounter.</td>
+</tr>
+<tr>
+<td>effectiveDateTime</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#dateTime" target="_blank">dateTime</a></td>
+<td>0..1</td>
+<td>Clinically relevant time/time-period for observation. Often just a dateTime for Vital Signs. Knowing when an observation was deemed true is important to its relevance as well as determining trends. At least a date should be present unless this observation is a historical report.</td>
+</tr>
+<tr>
+<td>effectivePeriod</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Period" target="_blank">Period</a></td>
+<td>0..1</td>
+<td>Clinically relevant time/time-period for observation. Often a dateTime for Vital Signs is preferred but if it is a historical instance, then a time period is sufficient.</td>
+</tr>
+<tr>
+<td>issued</td>
+<td>Hl7.Fhir.Model.Instant</td>
+<td>0..1</td>
+<td>Date/Time this was made available.</td>
+</tr>
+<tr>
+<td>performer</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Practitioner.html" target="_blank">Practitioner</a>, <a href="https://www.hl7.org/fhir/Organization.html" target="_blank">Organization</a>, <a href="https://www.hl7.org/fhir/Patient.html" target="_blank">Patient</a>, <a href="https://www.hl7.org/fhir/RelatedPerson.html" target="_blank">RelatedPerson</a>)</td>
+<td>0..*</td>
+<td>Who is responsible for the observation or obtaining the vital sign. May give a degree of confidence in the observation and also indicates where follow-up questions should be directed.</td>
+</tr>
+<tr>
+<td>valueQuantity</td>
+<td>Quantity</td>
+<td>0..1</td>
+<td>Vital Sign Value recorded with UCUM. Common UCUM units for recording Vital Signs. The codes shall be taken from Common UCUM units as defined in <a href="http://unitsofmeasure.org/">http://unitsofmeasure.org</a> Examples include % (percent), cm (centimeter), kg (kilogram), mm(Hg) (millimeter of mercury), /min (per minute) and kg/m2 (kilogram). Note: Normally, an observation will have either a value or a set of related observations. A few observations (e.g. Apgar score) may have both a value and related observations (for an Apgar score, the observations from which the measure is derived). If a value is present, the datatype for this element should be determined by Observation.code. This element has a variable name depending on the type as follows: valueQuantity, valueCodeableConcept, valueString, valueRange, valueRatio, valueSampledData, valueAttachment, valueTime, valueDateTime, or valuePeriod. (The name format is “‘value’ + the type name” with a capital on the first letter of the type).</td>
+</tr>
+<tr>
+<td>valueQuantity.value</td>
+<td><a href="http://www.hl7.org/fhir/daf/daf-vitalsigns-definitions.html#daf-vitalsigns.Observation.valueQuantity.value">http://www.hl7.org/fhir/daf/daf-vitalsigns-definitions.html#daf-vitalsigns.Observation.valueQuantity.value</a></td>
+<td>0..1</td>
+<td>The value of the measured amount. The value includes an implicit precision in the presentation of the value. Precision is handled implicitly in almost all cases of measurement.  The implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books).</td>
+</tr>
+<tr>
+<td>valueQuantity.unit</td>
+<td><a href="http://www.hl7.org/fhir/daf/daf-vitalsigns-definitions.html#daf-vitalsigns.Observation.valueQuantity.unit">http://www.hl7.org/fhir/daf/daf-vitalsigns-definitions.html#daf-vitalsigns.Observation.valueQuantity.unit</a></td>
+<td>0..1</td>
+<td>A human-readable form of the unit.  There are many representations for units of measure and in many contexts, particular representations are fixed and required. For example, mcg for micrograms.</td>
+</tr>
+<tr>
+<td>valueQuantity.system</td>
+<td><a href="http://www.hl7.org/fhir/daf/daf-vitalsigns-definitions.html#daf-vitalsigns.Observation.valueQuantity.system">http://www.hl7.org/fhir/daf/daf-vitalsigns-definitions.html#daf-vitalsigns.Observation.valueQuantity.system</a></td>
+<td>0..1</td>
+<td>The identification of the system that provides the coded form of the unit. Need to know the system that defines the coded form of the unit.  Fixed value <a href="http://unitsofmeasure.org/">http://unitsofmeasure.org</a>.</td>
+</tr>
+<tr>
+<td>valueQuantity.code</td>
+<td><a href="http://www.hl7.org/fhir/daf/daf-vitalsigns-definitions.html#daf-vitalsigns.Observation.valueQuantity.code">http://www.hl7.org/fhir/daf/daf-vitalsigns-definitions.html#daf-vitalsigns.Observation.valueQuantity.code</a></td>
+<td>0..1</td>
+<td>Coded responses from the common UCUM units for vital signs value set.  Need a computable form of the unit that is fixed across all forms. UCUM provides this for quantities, but SNOMED CT provides many units of interest.  The preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency. The context of use may additionally require a code from a particular system.</td>
+</tr>
+<tr>
+<td>dataAbsentReason</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Provides a reason why the expected value in the element Observation.value[x] is missing.  Codes specifying why the result (Observation.value[x]) is missing.  The codes shall be taken from Observation Value Absent Reason value set, however other codes may be used where these codes are not suitable. This value set contains 9 concepts. For more information on this value set, see  <a href="http://hl7.org/fhir/ValueSet/observation-valueabsentreason">http://hl7.org/fhir/ValueSet/observation-valueabsentreason</a>.</td>
+</tr>
+<tr>
+<td>interpretation</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>This value set defines the set of codes that can be used to indicate the meaning/use of a reference range. The value set is extensible and contains 33 concepts. Examples include A (Abnormal), H (High), L (Low), and N (Normal).  For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/observation-interpretation">http://hl7.org/fhir/ValueSet/observation-interpretation</a>.</td>
+</tr>
+<tr>
+<td>referenceRange</td>
+<td>BackboneElement <a href="http://www.hl7.org/fhir/daf/daf-vitalsigns-definitions.html#daf-vitalsigns.Observation.referenceRange">http://www.hl7.org/fhir/daf/daf-vitalsigns-definitions.html#daf-vitalsigns.Observation.referenceRange</a></td>
+<td>0..*</td>
+<td>Guidance on how to interpret the value by comparison to a normal or recommended range.  Knowing what values are considered “normal” can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.  Most observations only have one generic reference range. Systems may choose to restrict to only supplying the relevant reference range based on knowledge about the patient (for example, specific to the patient’s age, gender, weight, and other factors), but this may not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them should be provided in the reference range and/or age properties.</td>
+</tr>
+<tr>
+<td>— referenceRange.Low</td>
+<td>SimpleQuantity <a href="http://www.hl7.org/fhir/daf/daf-vitalsigns-definitions.html#daf-vitalsigns.Observation.referenceRange.low">http://www.hl7.org/fhir/daf/daf-vitalsigns-definitions.html#daf-vitalsigns.Observation.referenceRange.low</a></td>
+<td>0..1</td>
+<td>Indication that the vital result is lower than the defined reference range. Binding is common UCUM units for recording Vital Signs.</td>
+</tr>
+<tr>
+<td>— referenceRange.High</td>
+<td>SimpleQuantity <a href="http://www.hl7.org/fhir/daf/daf-vitalsigns-definitions.html#daf-vitalsigns.Observation.referenceRange.high">http://www.hl7.org/fhir/daf/daf-vitalsigns-definitions.html#daf-vitalsigns.Observation.referenceRange.high</a></td>
+<td>0..1</td>
+<td>Indication that the vital result is higher than the defined reference range. Binding is common UCUM units for recording Vital Signs.</td>
+</tr>
+<tr>
+<td>Respiratory rate</td>
+<td><a href="http://argonautwiki.hl7.org/index.php?title=Vital_Signs_Respiratory_Rate_Example">http://argonautwiki.hl7.org/index.php?title=Vital_Signs_Respiratory_Rate_Example</a></td>
+<td>0..1</td>
+<td>Recorded under LOINC Code 9279-1 using UOM of (breaths)/min.</td>
+</tr>
+<tr>
+<td>Heart rate</td>
+<td><a href="http://argonautwiki.hl7.org/index.php?title=Vital_Signs_Heart_Rate_Example">http://argonautwiki.hl7.org/index.php?title=Vital_Signs_Heart_Rate_Example</a></td>
+<td>0..1</td>
+<td>Recorded under LOINC Code 8867-4 using UOM of (beats)/min.</td>
+</tr>
+<tr>
+<td>Oxygen saturation</td>
+<td><a href="http://argonautwiki.hl7.org/index.php?title=Vital_Signs_Oxygen_Saturation_Example">http://argonautwiki.hl7.org/index.php?title=Vital_Signs_Oxygen_Saturation_Example</a></td>
+<td>0..1</td>
+<td>Recorded under LOINC Code 59408-5 using UOM of % Oxygen saturation in Arterial blood by Pulse oximetry.</td>
+</tr>
+<tr>
+<td>Body temperature</td>
+<td><a href="http://argonautwiki.hl7.org/index.php?title=Vital_Signs_Body_Temperature_Example">http://argonautwiki.hl7.org/index.php?title=Vital_Signs_Body_Temperature_Example</a></td>
+<td>0..1</td>
+<td>Recorded under LOINC Code 8310-5 using UOM of Cel or [degF].</td>
+</tr>
+<tr>
+<td>Body height</td>
+<td><a href="http://argonautwiki.hl7.org/index.php?title=Vital_Signs_Body_height_Example">http://argonautwiki.hl7.org/index.php?title=Vital_Signs_Body_height_Example</a></td>
+<td>0..1</td>
+<td>Recorded under LOINC Code 8302-2 using UOM cm or [in].</td>
+</tr>
+<tr>
+<td>Body weight</td>
+<td><a href="http://argonautwiki.hl7.org/index.php?title=Vital_Signs_Body_Weight_Example">http://argonautwiki.hl7.org/index.php?title=Vital_Signs_Body_Weight_Example</a></td>
+<td>0..1</td>
+<td>Recorded under LOINC Code 29463-7 using UOM g, kg or lb.</td>
+</tr>
+<tr>
+<td>Body mass index</td>
+<td><a href="http://argonautwiki.hl7.org/index.php?title=Vital_Body_Mass_Example">http://argonautwiki.hl7.org/index.php?title=Vital_Body_Mass_Example</a></td>
+<td>0..1</td>
+<td>Recorded under LOINC Code 39156-5 using UOM kg/m2.</td>
+</tr>
+<tr>
+<td>Blood pressure systolic and diastolic</td>
+<td><a href="http://argonautwiki.hl7.org/index.php?title=Vital_Signs_Blood_Pressure_Example">http://argonautwiki.hl7.org/index.php?title=Vital_Signs_Blood_Pressure_Example</a></td>
+<td>1..1</td>
+<td>Recorded under LOINC Code 55284-4 using UOM mm[Hg].</td>
+</tr>
+<tr>
+<td>Systolic blood pressure</td>
+<td><a href="http://argonautwiki.hl7.org/index.php?title=Vital_Signs_Blood_Pressure_Example">http://argonautwiki.hl7.org/index.php?title=Vital_Signs_Blood_Pressure_Example</a></td>
+<td>1..1</td>
+<td>Recorded under LOINC Code 8480-6 using UOM mm[Hg]. When recording a blood pressure using systolic and diastolic as separate entities, both must be recorded in order for the blood pressure to be valid.</td>
+</tr>
+<tr>
+<td>Diastolic blood pressure</td>
+<td><a href="http://argonautwiki.hl7.org/index.php?title=Vital_Signs_Blood_Pressure_Example">http://argonautwiki.hl7.org/index.php?title=Vital_Signs_Blood_Pressure_Example</a></td>
+<td>1..1</td>
+<td>Recorded under LOINC Code 8462-4 using UOM mm[Hg]. When recording a blood pressure using systolic and diastolic as separate entities, both must be recorded in order for the blood pressure to be valid.</td>
+</tr>
+<tr>
+<td>related</td>
+<td>code <a href="http://www.hl7.org/fhir/daf/daf-vitalsigns-definitions.html#daf-vitalsigns.Observation.related.type">http://www.hl7.org/fhir/daf/daf-vitalsigns-definitions.html#daf-vitalsigns.Observation.related.type</a></td>
+<td>1..1</td>
+<td>Codes specifying how two observations are related. This is used when reporting systolic and diastolic blood pressure. The codes shall be taken from the ObservationRelationshipType value set. For more information on this value set, see <a href="http://www.hl7.org/fhir/valueset-observation-relationshiptypes.html">http://www.hl7.org/fhir/valueset-observation-relationshiptypes.html</a>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="searching-by-date">Searching by date</h3>
+<p>Dates are passed as query paramters on the URL. Since the URL parameters cannot handle comparators (for example, &gt;, &lt;=) these are passed in as part of the date.</p>
+<pre><code class="lang-javascript hljs">date=eq2016<span class="hljs-number">-01</span><span class="hljs-number">-01</span>
+date=gt2016<span class="hljs-number">-01</span><span class="hljs-number">-01</span>
+</code></pre>
+<p>The following comparators are supported:</p>
+<table>
+<thead>
+<tr>
+<th>Comparator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eq</td>
+<td>equal</td>
+</tr>
+<tr>
+<td>gt</td>
+<td>greater than</td>
+</tr>
+<tr>
+<td>ge</td>
+<td>greater than or equal</td>
+</tr>
+<tr>
+<td>lt</td>
+<td>less than</td>
+</tr>
+<tr>
+<td>le</td>
+<td>less than or equal</td>
+</tr>
+</tbody>
+</table>
+<p>To search for a date range, pass in the date twice.</p>
+<p>e.g. <code>date=ge2010-01-01&amp;date=le2010-12-31</code></p>
+<p>This search would include every day in the year 2010.</p>
+
+    </div>
+
+
+</body></html>

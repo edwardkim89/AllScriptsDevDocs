@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)https://developer.allscripts.com/Content/fhir/content/Condition/ -->
+<html lang="en" class="gr__developer_allscripts_com" sigplusextliteextension-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">    
+    <title>Condition (Problem)</title>
+	<link rel="stylesheet" type="text/css" href="./Condition (Problem)_files/main.css">
+    <link rel="stylesheet" href="./Condition (Problem)_files/default.min.css">
+    <script src="./Condition (Problem)_files/highlight.min.js.download"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body data-gr-c-s-loaded="true">
+	<div class="right-sidebar">
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/">   Home</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/overview">   Overview</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Authentication_and_Authorization">   Authentication and Authorization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/patient">   Patient</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Condition">   Condition (Problem)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Immunization">   Immunization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationStatement">   MedicationStatement</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/AllergyIntolerance">   AllergyIntolerance</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/SmokingStatus">   SmokingStatus</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationOrder">   MedicationOrder</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Results">   Laboratory Result Observationss</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/VitalSigns">   VitalSign</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Procedure">   Procedure</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Assessment_and_plan">   Assessment and Plan of Treatment</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/CareTeam">   Care Team</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DiagnosticReport">   Laboratory Result DiagnosticReport</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Goal">   Goal</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Device">   Implantable Devices/UDI</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DocumentReference">   DocumentReference (CCDA)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HealthConcern">   Health Concern</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HowDoPatientsLogin">   How Do Patients Log In</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Developer_Signup">   Developer Signup</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/FHIR_Sandboxes">   Sandboxes</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Smart%20on%20FHIR">   SMART on FHIR</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/REST_and_HTTP_considerations">   REST and HTTP considerations</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Helpful_resources">   Helpful resources</a>
+ 			</div>
+    </div>
+
+   <div class="content">
+        <h1 id="detailed-information-about-conditions-problems-or-diagnoses">Detailed information about conditions, problems, or diagnoses</h1>
+<h2 id="retrieving-a-patient-s-conditions">Retrieving a patient’s conditions</h2>
+<p>The patient’s logical ID used to retrieve the patient is passed as part of the URL.
+The logical ID is found as the result of a search.</p>
+<pre><code class="lang-bash hljs">GET https://tw171.open.allscripts.com/FHIR/Patient/id/Condition
+GET https://tw171.open.allscripts.com/FHIR/Patient/id/Condition?category=problem
+GET https://tw171.open.allscripts.com/FHIR/Patient/id/Condition?date=eq2016-01-01
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required?</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>yes</td>
+<td>URL</td>
+<td>The patient’s logical ID.  This is retrieved using the search function.</td>
+</tr>
+<tr>
+<td>date</td>
+<td>no</td>
+<td>string</td>
+<td>A string representing a date to include in the search.  See below for more information.</td>
+</tr>
+</tbody>
+</table>
+<p>A DAF condition (problem) is returned.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>identifier</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Identifier" target="_blank">Identifier</a></td>
+<td>0..*</td>
+<td>External ID for the condition. The ID is defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. For example, in CDA documents or in written or printed documentation. This may include IMO, ICD9/10, or Medcin codes.</td>
+</tr>
+<tr>
+<td>patient</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Patient.html" target="_blank">Patient</a>)</td>
+<td>1..1</td>
+<td>Patient name. This indicates the patient who the condition record is associated with. This is used for querying and retrieving patient demographic information.</td>
+</tr>
+<tr>
+<td>encounter</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Encounter.html" target="_blank">Encounter</a>)</td>
+<td>0..1</td>
+<td>Encounter during which the condition was first asserted.</td>
+</tr>
+<tr>
+<td>asserter</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Practitioner.html" target="_blank">Practitioner</a>, <a href="https://www.hl7.org/fhir/Patient.html" target="_blank">Patient</a>)</td>
+<td>0..1</td>
+<td>Individual who asserts the condition. This is a provider reference.</td>
+</tr>
+<tr>
+<td>dateRecorded</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#date" target="_blank">date</a>)</td>
+<td>0..1</td>
+<td>Date when the condition was first recorded. This is not the date on which the condition was last updated.</td>
+</tr>
+<tr>
+<td>code</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>1..1</td>
+<td>ID of the condition, problem, or diagnosis. The value set includes content from SNOMED. For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/condition-code" target="_blank">condition-code</a>.</td>
+</tr>
+<tr>
+<td>category</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Condition category. Valid entries include: Complaint, Symptom, Finding, and Diagnosis. For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/condition-category" target="_blank">condition-category</a>.</td>
+</tr>
+<tr>
+<td>clinicalStatus</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#code" target="_blank">code</a></td>
+<td>0..1</td>
+<td>Condition clinical status. Valid entries include: Active, Relapse, Remission, and Resolved. For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/condition-clinical" target="_blank">condition-clinical</a>.</td>
+</tr>
+<tr>
+<td>verificationStatus</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#code" target="_blank">code</a></td>
+<td>1..1</td>
+<td>Condition verification status. Valid entries include: Provisional, Differential, Confirmed, Refuted, Entered-in-error, and Unknown. For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/condition-ver-status" target="_blank">condition-ver-status</a>.</td>
+</tr>
+<tr>
+<td>severity</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Subjective severity of condition. Valid entries include the following SNOMED codes: 399166001 Fatal, 24484000 Severe, 6736007 Moderate, and 255604002 Mild. For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/condition-severity" target="_blank">condition-severity</a>.</td>
+</tr>
+<tr>
+<td>onsetDateTime</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#dateTime" target="_blank">dateTime</a></td>
+<td>0..1</td>
+<td>Estimated or actual date, date-time, or age when the condition statement was documented. The Date Recorded indicates the date when this particular condition record was created in the EHR, not the date of the most recent update. For Allscripts TouchWorks EHR, onset date is pulled from Problem.OnsetFuzzyWhen.</td>
+</tr>
+<tr>
+<td>onsetQuantity</td>
+<td>Quantity</td>
+<td>0..1</td>
+<td>Estimated or actual date,  date-time, or age.</td>
+</tr>
+<tr>
+<td>onsetPeriod</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Period" target="_blank">Period</a></td>
+<td>0..1</td>
+<td>Estimated or actual date,  date-time, or age.</td>
+</tr>
+<tr>
+<td>onsetRange</td>
+<td>Hl7.Fhir.Model.Range</td>
+<td>0..1</td>
+<td>Estimated or actual date,  date-time, or age.</td>
+</tr>
+<tr>
+<td>onsetString</td>
+<td>String</td>
+<td>0..1</td>
+<td>Estimated or actual date,  date-time, or age.</td>
+</tr>
+<tr>
+<td>abatementDateTime</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#dateTime" target="_blank">dateTime</a></td>
+<td>0..1</td>
+<td>If/when in resolution/remission.</td>
+</tr>
+<tr>
+<td>abatementQuantity</td>
+<td>Quantity</td>
+<td>0..1</td>
+<td>If/when in resolution/remission.</td>
+</tr>
+<tr>
+<td>abatementBoolean</td>
+<td>Boolean</td>
+<td>0..1</td>
+<td>If/when in resolution/remission.</td>
+</tr>
+<tr>
+<td>abatementPeriod</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Period" target="_blank">Period</a></td>
+<td>0..1</td>
+<td>If/when in resolution/remission.</td>
+</tr>
+<tr>
+<td>abatementRange</td>
+<td>Hl7.Fhir.Model.Range</td>
+<td>0..1</td>
+<td>If/when in resolution/remission.</td>
+</tr>
+<tr>
+<td>abatementString</td>
+<td>String</td>
+<td>0..1</td>
+<td>If/when in resolution/remission.</td>
+</tr>
+<tr>
+<td>stage</td>
+<td></td>
+<td>0..1</td>
+<td>Stage/grade, usually assessed formally.</td>
+</tr>
+<tr>
+<td>– stage.summary</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Simple summary (disease specific). For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/condition-stage" target="_blank">condition-stage</a>.</td>
+</tr>
+<tr>
+<td>– stage.assessment</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/ClinicalImpression.html" target="_blank">ClinicalImpression</a>, <a href="https://www.hl7.org/fhir/DiagnosticReport.html" target="_blank">DiagnosticReport</a>, <a href="https://www.hl7.org/fhir/Observation.html" target="_blank">Observation</a>)</td>
+<td>0..*</td>
+<td>Formal record of assessment.</td>
+</tr>
+<tr>
+<td>evidence</td>
+<td></td>
+<td>0..*</td>
+<td>Supporting evidence.</td>
+</tr>
+<tr>
+<td>– evidence.code</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Manifestation/symptom. For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/manifestation-or-symptom" target="_blank">manifestation-or-symptom</a>.</td>
+</tr>
+<tr>
+<td>– evidence.detail</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Resource.html" target="_blank">Resource</a>)</td>
+<td>0..*</td>
+<td>Supporting information found elsewhere.</td>
+</tr>
+<tr>
+<td>bodySite</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..*</td>
+<td>Anatomical location, if relevant. For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/body-site" target="_blank">body-site</a>.</td>
+</tr>
+<tr>
+<td>notes</td>
+<td>string</td>
+<td>0..1</td>
+<td>Additional information about the condition.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="searching-by-date">Searching by Date</h3>
+<p>Dates are passed as query paramters on the URL. Since the URL parameters cannot handle comparators (for example, &gt;, &lt;=) these are passed in as part of the date.</p>
+<pre><code class="lang-javascript hljs">date=eq2016<span class="hljs-number">-01</span><span class="hljs-number">-01</span>
+date=gt2016<span class="hljs-number">-01</span><span class="hljs-number">-01</span>
+</code></pre>
+<p>The following comparators are supported:</p>
+<table>
+<thead>
+<tr>
+<th>Comparator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eq</td>
+<td>equal</td>
+</tr>
+<tr>
+<td>gt</td>
+<td>greater than</td>
+</tr>
+<tr>
+<td>ge</td>
+<td>greater than or equal</td>
+</tr>
+<tr>
+<td>lt</td>
+<td>less than</td>
+</tr>
+<tr>
+<td>le</td>
+<td>less than or equal</td>
+</tr>
+</tbody>
+</table>
+<p>To search for a date range, pass in the date twice.</p>
+<p>e.g. <code>date=ge2010-01-01&amp;date=le2010-12-31</code></p>
+<p>This search would include every day in the year 2010.</p>
+
+    </div>
+
+
+</body></html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)https://developer.allscripts.com/Content/fhir/content/DiagnosticReport/ -->
+<html lang="en" sigplusextliteextension-installed="true" class="gr__developer_allscripts_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">    
+    <title>Laboratory Result DiagnosticReport</title>
+	<link rel="stylesheet" type="text/css" href="./Laboratory Result DiagnosticReport_files/main.css">
+    <link rel="stylesheet" href="./Laboratory Result DiagnosticReport_files/default.min.css">
+    <script src="./Laboratory Result DiagnosticReport_files/highlight.min.js.download"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body data-gr-c-s-loaded="true">
+	<div class="right-sidebar">
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/">   Home</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/overview">   Overview</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Authentication_and_Authorization">   Authentication and Authorization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/patient">   Patient</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Condition">   Condition (Problem)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Immunization">   Immunization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationStatement">   MedicationStatement</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/AllergyIntolerance">   AllergyIntolerance</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/SmokingStatus">   SmokingStatus</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationOrder">   MedicationOrder</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Results">   Laboratory Result Observationss</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/VitalSigns">   VitalSign</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Procedure">   Procedure</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Assessment_and_plan">   Assessment and Plan of Treatment</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/CareTeam">   Care Team</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DiagnosticReport">   Laboratory Result DiagnosticReport</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Goal">   Goal</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Device">   Implantable Devices/UDI</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DocumentReference">   DocumentReference (CCDA)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HealthConcern">   Health Concern</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HowDoPatientsLogin">   How Do Patients Log In</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Developer_Signup">   Developer Signup</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/FHIR_Sandboxes">   Sandboxes</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Smart%20on%20FHIR">   SMART on FHIR</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/REST_and_HTTP_considerations">   REST and HTTP considerations</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Helpful_resources">   Helpful resources</a>
+ 			</div>
+    </div>
+
+   <div class="content">
+        <p>Diagnostic report: a combination of requested information, atomic results, images, interpretation, and formatted reports.</p>
+<h2 id="retrieving-a-patient-s-laboratory-result-diagnostic-reports">Retrieving a patient’s laboratory result diagnostic reports</h2>
+<p>The logical ID of the patient to retrieve is passed as part of the URL.
+The logical ID is found as the result of a search.</p>
+<pre><code class="lang-bash hljs">GET https://tw171.open.allscripts.comFHIR/Patient/id/DiagnosticReport?category=LAB
+GET https://tw171.open.allscripts.com/FHIR/Patient/id/DiagnosticReport?category=LAB&amp;date=eq2016-01-01
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required?</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>yes</td>
+<td>URL</td>
+<td>The logical ID of the patient. This is retrieved using the search function.</td>
+</tr>
+<tr>
+<td>date</td>
+<td>no</td>
+<td>string</td>
+<td>A string representing a date to include in the search. See below for more information.</td>
+</tr>
+</tbody>
+</table>
+<p>A DAF DiagnosticReport is returned.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>identifier</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Identifier" target="_blank"></a></td>
+<td>0..*</td>
+<td>Local ID assigned to the report by the order filler, usually by the information system of the diagnostic service provider. You must know what identifier to use when making queries about this report from the source laboratory and for linking to the report outside FHIR context. Alternate name: ReportID.</td>
+</tr>
+<tr>
+<td>status</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#code" target="_blank">code</a></td>
+<td>1..1</td>
+<td>Status of the diagnostic report as a whole. Diagnostic services routinely issue provisional/incomplete reports, and sometimes withdraw previously released reports. This is labeled as “Is Modifier” because applications need to take appropriate action if a report is withdrawn. The codes shall be taken from the DiagnosticReportStatus value set, which includes the following statuses: Registered, Partial, Final, Corrected, Appended, Cancelled, and Entered-in-Error. For more information on this value set, see: <a href="http://hl7.org/fhir/ValueSet/diagnostic-report-status">http://hl7.org/fhir/ValueSet/diagnostic-report-status</a>.</td>
+</tr>
+<tr>
+<td>category</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Code that classifies the clinical discipline, department, or diagnostic service that created the report. For example, cardiology, biochemistry, hematology, or MRI. This is used for searching, sorting, and displaying purposes. The level of granularity is defined by the category concepts in the DiagnosticServiceSectionCodes value set. More filtering is performed using the metadata and/or terminology hierarchy in DiagnosticReport.code. Alternate names: Department, Sub-department, service, discipline.  Example codes include: AU- Audiology, CH- Chemistry, MB- Microbiology, and HM- Hematology. For more information on this value set, see: <a href="http://hl7.org/fhir/ValueSet/diagnostic-service-sections">http://hl7.org/fhir/ValueSet/diagnostic-service-sections</a>.</td>
+</tr>
+<tr>
+<td>code</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>1..1</td>
+<td>Test, panel, or battery that was ordered. The typical patterns for codes are: 1) a LOINC code either as a translation from a “local” code or as a primary code, 2) a local code only if no suitable LOINC exists, or 3) both the local and the LOINC translation. Systems shall be capable of sending the local code if one exists. The codes shall be taken from US Laboratory Observation Profile Observation Name Codes. Other codes may be used where these codes are not suitable. This value set has more than 1000 codes. For more information on this value set, see: <a href="http://hl7.org/fhir/ValueSet/report-codes">http://hl7.org/fhir/ValueSet/report-codes</a>.</td>
+</tr>
+<tr>
+<td>subject</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Patient.html" target="_blank">Patient</a>, <a href="https://www.hl7.org/fhir/Group.html" target="_blank">Group</a>, <a href="https://www.hl7.org/fhir/Device.html" target="_blank">Device</a>, <a href="https://www.hl7.org/fhir/Location.html" target="_blank">Location</a>)</td>
+<td>1..1</td>
+<td>Subject of the report. Usually this is a patient. However, diagnostic services also perform analyses on specimens collected from a variety of other sources.</td>
+</tr>
+<tr>
+<td>encounter</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Encounter.html" target="_blank">Encounter</a>)</td>
+<td>0..1</td>
+<td>Link to the healthcare event (encounter) when the order was made.</td>
+</tr>
+<tr>
+<td>effectiveDateTime</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#dateTime" target="_blank">dateTime</a></td>
+<td>1..1</td>
+<td>Specimen Collection Datetime which is the physically relevant dateTime for laboratory tests.  If the diagnostic procedure was performed on the patient, this is the time it was performed. If there are specimens, the diagnostically relevant time can be derived from the specimen collection times, but the specimen information is not always available, and the exact relationship between the specimens and the diagnostically relevant time is not always automatic.</td>
+</tr>
+<tr>
+<td>effectivePeriod</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Period" target="_blank">Period</a></td>
+<td>1..1</td>
+<td>Specimen Collection Period which is the physically relevant dateTime for laboratory tests.  If the diagnostic procedure was performed on the patient, this is the time it was performed. If there are specimens, the diagnostically relevant time can be derived from the specimen collection times, but the specimen information is not always available, and the exact relationship between the specimens and the diagnostically relevant time is not always automatic. If the start element is missing, the start of the period is not known. If the end element is missing, it means that the period is ongoing, or the start may be in the past, and the end date in the future, which means that period is expected/planned to end at the specified time.</td>
+</tr>
+<tr>
+<td>issued</td>
+<td>Hl7.Fhir.Model.Instant</td>
+<td>1..1</td>
+<td>Date and time that this version of the report was released from the source diagnostic service. Clinicians must be able to check the date that the report was released.  This may be different from the update time of the resource itself, because that is the status of the record (potentially a secondary copy), not the actual release time of the report. Alternate names: Date Created, Date published, Date Issued.</td>
+</tr>
+<tr>
+<td>performer</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Practitioner.html" target="_blank">Practitioner</a>, <a href="https://www.hl7.org/fhir/Organization.html" target="_blank">Organization</a>)</td>
+<td>1..1</td>
+<td>Diagnostic service that is responsible for issuing the report. This is helpful to know who to contact if there are queries about the results. You may need to track the source of reports for secondary data analysis. This is not necessarily the source of the atomic data items. It is the entity that takes responsibility for the clinical report. Alternate names: Laboratory, Service, Practitioner, Department, Company.</td>
+</tr>
+<tr>
+<td>request</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/DiagnosticOrder.html" target="_blank">DiagnosticOrder</a>, <a href="https://www.hl7.org/fhir/ProcedureRequest.html" target="_blank">ProcedureRequest</a>, <a href="https://www.hl7.org/fhir/ReferralRequest.html" target="_blank">ReferralRequest</a>)</td>
+<td>1..*</td>
+<td>Details concerning a test or procedure requested.  You need to be able to track completion of requests based on reports issued and also to report what diagnostic tests were requested (not always the same as what is delivered). You need to be able to track completion of requests based on reports issued and also to report what diagnostic tests were requested (not always the same as what is delivered).</td>
+</tr>
+<tr>
+<td>specimen</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Specimen.html" target="_blank">Specimen</a>)</td>
+<td>0..*</td>
+<td>Details about the specimens on which this diagnostic report is based. If the specimen is sufficiently specified with a code in the test result name, then this additional data may be redundant. If there are multiple specimens, these may be represented per observation or group.</td>
+</tr>
+<tr>
+<td>result</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Observation.html" target="_blank">Observation</a>)</td>
+<td>0..*</td>
+<td>Observations that are part of this diagnostic report. Observations can be simple name/value pairs (for example, “atomic” results), or they can be grouping observations that include references to other members of the group (such as “panels”). You need to support individual results, or report groups of results, where the result grouping is arbitrary, but meaningful. This structure is recursive in that observations can contain observations. Alternate names: Data, Atomic Value, Result, Atomic result, Data, Test, Analyte, Battery, or Organizer.</td>
+</tr>
+<tr>
+<td>imagingStudy</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/ImagingStudy.html" target="_blank">ImagingStudy</a>, <a href="https://www.hl7.org/fhir/ImagingObjectSelection.html" target="_blank">ImagingObjectSelection</a>)</td>
+<td>0..*</td>
+<td>One or more links to full details of any imaging performed during the diagnostic investigation. Typically, this is imaging performed by DICOM enabled modalities, but this is not required. A fully enabled PACS viewer can use this information to provide views of the source images. ImagingStudy and ImageObjectStudy and the image element are somewhat overlapping - typically, the list of image references in the image element will also be found in one of the imaging study resources. However each caters to different types of displays for different types of purposes. Neither, either, or both may be provided.</td>
+</tr>
+<tr>
+<td>image</td>
+<td></td>
+<td>0..*</td>
+<td>List of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (for example, slides of interest).</td>
+</tr>
+<tr>
+<td>– image.comment</td>
+<td>string</td>
+<td>0..1</td>
+<td>Comment about the image. Typically this is used to provide an explanation for why the image is included, or to draw the viewer’s attention to important features. The provider of the report should make a comment about each image included in the report. The comment should be displayed with the image. It would be common for the report to include additional discussion of the image contents in other sections such as the conclusion.</td>
+</tr>
+<tr>
+<td>– image.link</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Media.html" target="_blank">Media</a>)</td>
+<td>1..1</td>
+<td>Reference to the image source.</td>
+</tr>
+<tr>
+<td>conclusion</td>
+<td>string</td>
+<td>0..1</td>
+<td>Concise and clinically contextualized narrative interpretation of the diagnostic report. You need to be able to provide a conclusion that is not lost among the basic result data. Typically, a report is either [all data, no narrative (e.g. Core lab)] or [a mix of data with some concluding narrative (e.g. Structured Pathology Report, Bone Density)], or [all narrative (e.g. typical imaging report, histopathology)]. In all of these cases, the narrative goes in “text”.</td>
+</tr>
+<tr>
+<td>codedDiagnosis</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..*</td>
+<td>Codes for the conclusion which are SNOMED CT findings codes provided as adjunct diagnosis to the report. The codes should be taken from SNOMED CT Clinical Findings. Included are codes from <a href="http://snomed.info/sct">http://snomed.info/sct</a> where concept is-a 404684003. For more information on this value set, see: <a href="http://hl7.org/fhir/ValueSet/clinical-findings">http://hl7.org/fhir/ValueSet/clinical-findings</a>.</td>
+</tr>
+<tr>
+<td>presentedForm</td>
+<td>Hl7.Fhir.Model.Attachment</td>
+<td>0..*</td>
+<td>Rich text representation of the entire result as issued by the diagnostic service. Multiple formats are allowed but they shall be semantically equivalent. This gives the laboratory the ability to provide its own fully formatted report for clinical fidelity. Note: “application/pdf” is recommended as the most reliable and interoperable in this context.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="searching-by-date">Searching by Date</h3>
+<p>Dates are passed as query parameters on the URL. Since the URL parameters cannot handle comparators (for example, &gt;, &lt;=) these are passed as part of the date.</p>
+<pre><code class="lang-javascript hljs">date=eq2016<span class="hljs-number">-01</span><span class="hljs-number">-01</span>
+date=gt2016<span class="hljs-number">-01</span><span class="hljs-number">-01</span>
+</code></pre>
+<p>The following comparators are supported:</p>
+<table>
+<thead>
+<tr>
+<th>Comparator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eq</td>
+<td>equal</td>
+</tr>
+<tr>
+<td>gt</td>
+<td>greater than</td>
+</tr>
+<tr>
+<td>ge</td>
+<td>greater than or equal</td>
+</tr>
+<tr>
+<td>lt</td>
+<td>less than</td>
+</tr>
+<tr>
+<td>le</td>
+<td>less than or equal</td>
+</tr>
+</tbody>
+</table>
+<p>To search for a date range, pass in the date twice.</p>
+<p><code>date=ge2010-01-01&amp;date=le2010-12-31</code></p>
+<p>This search would include every day in the year 2010.</p>
+
+    </div>
+
+
+</body></html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)https://developer.allscripts.com/Content/fhir/content/Procedure/ -->
+<html lang="en" sigplusextliteextension-installed="true" class="gr__developer_allscripts_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">    
+    <title>Procedure</title>
+	<link rel="stylesheet" type="text/css" href="./Procedure_files/main.css">
+    <link rel="stylesheet" href="./Procedure_files/default.min.css">
+    <script src="./Procedure_files/highlight.min.js.download"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body data-gr-c-s-loaded="true">
+	<div class="right-sidebar">
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/">   Home</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/overview">   Overview</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Authentication_and_Authorization">   Authentication and Authorization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/patient">   Patient</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Condition">   Condition (Problem)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Immunization">   Immunization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationStatement">   MedicationStatement</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/AllergyIntolerance">   AllergyIntolerance</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/SmokingStatus">   SmokingStatus</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationOrder">   MedicationOrder</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Results">   Laboratory Result Observationss</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/VitalSigns">   VitalSign</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Procedure">   Procedure</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Assessment_and_plan">   Assessment and Plan of Treatment</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/CareTeam">   Care Team</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DiagnosticReport">   Laboratory Result DiagnosticReport</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Goal">   Goal</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Device">   Implantable Devices/UDI</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DocumentReference">   DocumentReference (CCDA)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HealthConcern">   Health Concern</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HowDoPatientsLogin">   How Do Patients Log In</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Developer_Signup">   Developer Signup</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/FHIR_Sandboxes">   Sandboxes</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Smart%20on%20FHIR">   SMART on FHIR</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/REST_and_HTTP_considerations">   REST and HTTP considerations</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Helpful_resources">   Helpful resources</a>
+ 			</div>
+    </div>
+
+   <div class="content">
+        <h1 id="actions-performed-on-a-patient">Actions performed on a patient</h1>
+<h2 id="retrieving-a-patient-s-procedures">Retrieving a patient’s procedures</h2>
+<p>The logical ID (of the patient to retrieve) is passed as part of the URL.
+The logical ID is found as the result of a search.</p>
+<pre><code class="lang-bash hljs">GET https://tw171.open.allscripts.com/FHIR/Patient/id/Procedure
+GET https://tw171.open.allscripts.com/FHIR/Patient/id/Procedure?date=eq2016-01-01
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required?</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>yes</td>
+<td>URL</td>
+<td>Patient’s logical ID. This is retrieved using the search function.</td>
+</tr>
+<tr>
+<td>date</td>
+<td>no</td>
+<td>string</td>
+<td>A string representing a date to include in the search. See below for more information.</td>
+</tr>
+</tbody>
+</table>
+<p>A DAF Procedure is returned.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>identifier</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Identifier" target="_blank"></a></td>
+<td>0..*</td>
+<td>Procedure identifier. These identifiers are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (for example, in CDA documents, or in written/printed documentation).</td>
+</tr>
+<tr>
+<td>subject</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Patient.html" target="_blank">Patient</a>, <a href="https://www.hl7.org/fhir/Group.html" target="_blank">Group</a>)</td>
+<td>1..1</td>
+<td>Person, animal, or group on which the procedure was performed.</td>
+</tr>
+<tr>
+<td>status</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#code" target="_blank">code</a></td>
+<td>1..1</td>
+<td>In-progress, aborted, completed, or entered-in-error. For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/procedure-status" target="_blank">procedure-status</a>.</td>
+</tr>
+<tr>
+<td>category</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Classification of the procedure. For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/procedure-category" target="_blank">procedure-category</a>.</td>
+</tr>
+<tr>
+<td>code</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>1..1</td>
+<td>Identification code of the procedure. The value set defines a set of codes that can be used to indicate the type of procedure: a specific code indicating type of procedure performed from CPT, SNOMED CT, and ICD10-PCS. For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/procedure-code" target="_blank">procedure-code</a>.</td>
+</tr>
+<tr>
+<td>notPerformed</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#boolean" target="_blank">boolean</a></td>
+<td>0..1</td>
+<td>Was the procedure not performed as scheduled? (Yes if not scheduled.)</td>
+</tr>
+<tr>
+<td>reasonNotPerformed</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..*</td>
+<td>Reason procedure was not performed. For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/procedure-not-performed-reason" target="_blank">procedure-not-performed-reason</a>.</td>
+</tr>
+<tr>
+<td>bodySite</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..*</td>
+<td>Target body sites. For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/body-site" target="_blank">body-site</a>.</td>
+</tr>
+<tr>
+<td>reasonCodeableConcept</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Reason why the procedure was performed.</td>
+</tr>
+<tr>
+<td>reasonReference</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Condition.html" target="_blank">Condition</a>)</td>
+<td>0..1</td>
+<td>Reason for the procedure.</td>
+</tr>
+<tr>
+<td>performer</td>
+<td></td>
+<td>0..*</td>
+<td>Individual who performed the procedure. This must be a real person, not equipment.</td>
+</tr>
+<tr>
+<td>– performer.actor</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Practitioner.html" target="_blank">Practitioner</a>, <a href="https://www.hl7.org/fhir/Organization.html" target="_blank">Organization</a>, <a href="https://www.hl7.org/fhir/Patient.html" target="_blank">Patient</a>, <a href="https://www.hl7.org/fhir/RelatedPerson.html" target="_blank">RelatedPerson</a>)</td>
+<td>0..1</td>
+<td>Reference to the practitioner.</td>
+</tr>
+<tr>
+<td>– performer.role</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Role the actor was in. Values come from <a href="http://hl7.org/fhir/ValueSet/performer-role" target="_blank">performer-role</a>.</td>
+</tr>
+<tr>
+<td>performedDateTime</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#dateTime" target="_blank">dateTime</a></td>
+<td>0..1</td>
+<td>Date/time period over which the procedure was performed. Allows a period to support complex procedures that span more than one date, and also allows for the length of the procedure to be captured.</td>
+</tr>
+<tr>
+<td>performedPeriod</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Period" target="_blank">Period</a></td>
+<td>0..1</td>
+<td>Date/time period during which the procedure was performed.</td>
+</tr>
+<tr>
+<td>encounter</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Encounter.html" target="_blank">Encounter</a>)</td>
+<td>0..1</td>
+<td>Encounter during which the procedure was performed.</td>
+</tr>
+<tr>
+<td>location</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Location.html" target="_blank">Location</a>)</td>
+<td>0..1</td>
+<td>Location where the procedure was performed.</td>
+</tr>
+<tr>
+<td>outcome</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Result of the procedure. For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/procedure-outcome" target="_blank">procedure-outcome</a>.</td>
+</tr>
+<tr>
+<td>report</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/DiagnosticReport.html" target="_blank">DiagnosticReport</a>)</td>
+<td>0..*</td>
+<td>Any report resulting from the procedure.</td>
+</tr>
+<tr>
+<td>complication</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..*</td>
+<td>Complication following the procedure. For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/condition-code" target="_blank">condition-code</a>.</td>
+</tr>
+<tr>
+<td>followUp</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..*</td>
+<td>Instructions for follow up. For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/procedure-followup" target="_blank">procedure-followup</a>.</td>
+</tr>
+<tr>
+<td>request</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/CarePlan.html" target="_blank">CarePlan</a>, <a href="https://www.hl7.org/fhir/DiagnosticOrder.html" target="_blank">DiagnosticOrder</a>, <a href="https://www.hl7.org/fhir/ProcedureRequest.html" target="_blank">ProcedureRequest</a>, <a href="https://www.hl7.org/fhir/ReferralRequest.html" target="_blank">ReferralRequest</a>)</td>
+<td>0..1</td>
+<td>Request for the procedure.</td>
+</tr>
+<tr>
+<td>notes</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Annotation" target="_blank">Annotation</a></td>
+<td>0..*</td>
+<td>Additional information about the procedure.</td>
+</tr>
+<tr>
+<td>focalDevice</td>
+<td></td>
+<td>0..*</td>
+<td>Device changed during the procedure.</td>
+</tr>
+<tr>
+<td>– focalDevice.action</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Kind of change to device. For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/device-action" target="_blank">device-action</a>.</td>
+</tr>
+<tr>
+<td>– focalDevice.manipulated</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Device.html" target="_blank">Device</a>)</td>
+<td>1..1</td>
+<td>Device that was changed during the procedure.</td>
+</tr>
+<tr>
+<td>used</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Device.html" target="_blank">Device</a>, <a href="https://www.hl7.org/fhir/Medication.html" target="_blank">Medication</a>, <a href="https://www.hl7.org/fhir/Substance.html" target="_blank">Substance</a>)</td>
+<td>0..*</td>
+<td>Items used during the procedure.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="searching-by-date">Searching by date</h3>
+<p>Dates are passed as query parameters on the URL. Since the URL parameters cannot handle comparators (for example, &gt;, &lt;=) these are passed in as part of the date.</p>
+<pre><code class="lang-javascript hljs">date=eq2016<span class="hljs-number">-01</span><span class="hljs-number">-01</span>
+date=gt2016<span class="hljs-number">-01</span><span class="hljs-number">-01</span>
+</code></pre>
+<p>The following comparators are supported:</p>
+<table>
+<thead>
+<tr>
+<th>Comparator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eq</td>
+<td>equal</td>
+</tr>
+<tr>
+<td>gt</td>
+<td>greater than</td>
+</tr>
+<tr>
+<td>ge</td>
+<td>greater than or equal</td>
+</tr>
+<tr>
+<td>lt</td>
+<td>less than</td>
+</tr>
+<tr>
+<td>le</td>
+<td>less than or equal</td>
+</tr>
+</tbody>
+</table>
+<p>To search for a date range, pass in the date twice.</p>
+<p>e.g. <code>date=ge2010-01-01&amp;date=le2010-12-31</code></p>
+<p>This search would include every day in the year 2010.</p>
+
+    </div>
+
+
+</body></html>

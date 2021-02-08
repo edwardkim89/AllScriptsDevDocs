@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)https://developer.allscripts.com/Content/fhir/content/Device/ -->
+<html lang="en" sigplusextliteextension-installed="true" class="gr__developer_allscripts_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">    
+    <title>Implantable Devices/UDI</title>
+	<link rel="stylesheet" type="text/css" href="./Implantable Devices_UDI_files/main.css">
+    <link rel="stylesheet" href="./Implantable Devices_UDI_files/default.min.css">
+    <script src="./Implantable Devices_UDI_files/highlight.min.js.download"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body data-gr-c-s-loaded="true">
+	<div class="right-sidebar">
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/">   Home</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/overview">   Overview</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Authentication_and_Authorization">   Authentication and Authorization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/patient">   Patient</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Condition">   Condition (Problem)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Immunization">   Immunization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationStatement">   MedicationStatement</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/AllergyIntolerance">   AllergyIntolerance</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/SmokingStatus">   SmokingStatus</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationOrder">   MedicationOrder</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Results">   Laboratory Result Observationss</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/VitalSigns">   VitalSign</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Procedure">   Procedure</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Assessment_and_plan">   Assessment and Plan of Treatment</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/CareTeam">   Care Team</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DiagnosticReport">   Laboratory Result DiagnosticReport</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Goal">   Goal</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Device">   Implantable Devices/UDI</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DocumentReference">   DocumentReference (CCDA)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HealthConcern">   Health Concern</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HowDoPatientsLogin">   How Do Patients Log In</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Developer_Signup">   Developer Signup</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/FHIR_Sandboxes">   Sandboxes</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Smart%20on%20FHIR">   SMART on FHIR</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/REST_and_HTTP_considerations">   REST and HTTP considerations</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Helpful_resources">   Helpful resources</a>
+ 			</div>
+    </div>
+
+   <div class="content">
+        <h1 id="an-instance-of-a-manufactured-device-that-is-used-in-the-provision-of-healthcare">An instance of a manufactured device that is used in the provision of healthcare</h1>
+<h2 id="retrieving-a-patient-s-implantable-devices-udi">Retrieving a patient’s implantable devices/UDI</h2>
+<p>The logical ID of the patient to retrieve is passed as part of the URL. 
+The logical ID is found as the result of a search.</p>
+<pre><code class="lang-bash hljs">GET https://tw171.open.allscripts.com/FHIR/Patient/id/Device
+GET https://tw171.open.allscripts.com/FHIR/Patient/id/Device?date=eq2016-01-01
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required?</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>yes</td>
+<td>URL</td>
+<td>The logical ID of the patient. This is retrieved using the search function.</td>
+</tr>
+<tr>
+<td>date</td>
+<td>no</td>
+<td>string</td>
+<td>A string representing a date to include in the search.  See below for more information.</td>
+</tr>
+</tbody>
+</table>
+<p>A DAF Device is returned.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>identifier</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Identifier" target="_blank"></a></td>
+<td>0..*</td>
+<td>Unique instance identifier assigned to a device by organizations like manufacturers or owners. If the identifier indicates the type of device, Device.type should be used. This is a business identifier, not a resource identifier, often fixed to the device as a barcode, and may include names given to the device in local usage. Note that some of the barcodes affixed to the device identify its type, not its instance. For the FDA mandated Unique Device Identifier (UDI), use the Device.udi element.</td>
+</tr>
+<tr>
+<td>type</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>1..1</td>
+<td>Code or identifier to indicate a kind of device. For the FDA mandated Unique Device Identifier (UDI), use the Device.udi element.</td>
+</tr>
+<tr>
+<td>note</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Annotation" target="_blank">Annotation</a></td>
+<td>0..*</td>
+<td>Device notes and comments, including annotations.</td>
+</tr>
+<tr>
+<td>status</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#code" target="_blank">code</a></td>
+<td>0..1</td>
+<td>Status of the device availability. This value set has an inline system that defines the following codes: Available, Not Available, and Entered-in-Error. For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/devicestatus" target="_blank">devicestatus</a>.</td>
+</tr>
+<tr>
+<td>manufacturer</td>
+<td>string</td>
+<td>0..1</td>
+<td>Name of device manufacturer.</td>
+</tr>
+<tr>
+<td>model</td>
+<td>string</td>
+<td>0..1</td>
+<td>Model ID assigned by the manufacturer.</td>
+</tr>
+<tr>
+<td>version</td>
+<td>string</td>
+<td>0..1</td>
+<td>Version number. For example, software.</td>
+</tr>
+<tr>
+<td>manufactureDate</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#dateTime" target="_blank">dateTime</a></td>
+<td>0..1</td>
+<td>Manufacture date.</td>
+</tr>
+<tr>
+<td>expiry</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#dateTime" target="_blank">dateTime</a></td>
+<td>0..1</td>
+<td>Date and time of expiration of this device, if applicable.</td>
+</tr>
+<tr>
+<td>udi</td>
+<td>string</td>
+<td>0..1</td>
+<td>FDA mandated Unique Device Identifier.</td>
+</tr>
+<tr>
+<td>lotNumber</td>
+<td>string</td>
+<td>0..1</td>
+<td>Lot number of manufacturer.</td>
+</tr>
+<tr>
+<td>owner</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Organization.html" target="_blank">Organization</a>)</td>
+<td>0..1</td>
+<td>Organization responsible for device.</td>
+</tr>
+<tr>
+<td>location</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Location.html" target="_blank">Location</a>)</td>
+<td>0..1</td>
+<td>Where the resource is found.</td>
+</tr>
+<tr>
+<td>patient</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Patient.html" target="_blank">Patient</a>)</td>
+<td>0..1</td>
+<td>If the resource is affixed to a person.</td>
+</tr>
+<tr>
+<td>contact</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#ContactPoint" target="_blank">ContactPoint</a></td>
+<td>0..*</td>
+<td>Details for human/organization for support.</td>
+</tr>
+<tr>
+<td>url</td>
+<td>URI</td>
+<td>0..1</td>
+<td>Network address to contact device.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="searching-by-date">Searching by Date</h3>
+<p>Dates are passed as query paramters on the URL. Since the URL parameters cannot handle comparators (for example, &gt;, &lt;=) these are passed as pat of the date.</p>
+<pre><code class="lang-javascript hljs">date=eq2016<span class="hljs-number">-01</span><span class="hljs-number">-01</span>
+date=gt2016<span class="hljs-number">-01</span><span class="hljs-number">-01</span>
+</code></pre>
+<p>The following comparators are supported:</p>
+<table>
+<thead>
+<tr>
+<th>Comparator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eq</td>
+<td>equal</td>
+</tr>
+<tr>
+<td>gt</td>
+<td>greater than</td>
+</tr>
+<tr>
+<td>ge</td>
+<td>greater than or equal</td>
+</tr>
+<tr>
+<td>lt</td>
+<td>less than</td>
+</tr>
+<tr>
+<td>le</td>
+<td>less than or equal</td>
+</tr>
+</tbody>
+</table>
+<p>To search for a date range, pass in the date twice.</p>
+<p><code>date=ge2010-01-01&amp;date=le2010-12-31</code></p>
+<p>This search would include every day in the year 2010.</p>
+
+    </div>
+
+
+</body></html>

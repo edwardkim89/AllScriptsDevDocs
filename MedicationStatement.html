@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)https://developer.allscripts.com/Content/fhir/content/MedicationStatement/ -->
+<html lang="en" class="gr__developer_allscripts_com" sigplusextliteextension-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">    
+    <title>MedicationStatement</title>
+	<link rel="stylesheet" type="text/css" href="./MedicationStatement_files/main.css">
+    <link rel="stylesheet" href="./MedicationStatement_files/default.min.css">
+    <script src="./MedicationStatement_files/highlight.min.js.download"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body data-gr-c-s-loaded="true">
+	<div class="right-sidebar">
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/">   Home</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/overview">   Overview</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Authentication_and_Authorization">   Authentication and Authorization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/patient">   Patient</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Condition">   Condition (Problem)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Immunization">   Immunization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationStatement">   MedicationStatement</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/AllergyIntolerance">   AllergyIntolerance</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/SmokingStatus">   SmokingStatus</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationOrder">   MedicationOrder</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Results">   Laboratory Result Observationss</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/VitalSigns">   VitalSign</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Procedure">   Procedure</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Assessment_and_plan">   Assessment and Plan of Treatment</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/CareTeam">   Care Team</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DiagnosticReport">   Laboratory Result DiagnosticReport</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Goal">   Goal</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Device">   Implantable Devices/UDI</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DocumentReference">   DocumentReference (CCDA)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HealthConcern">   Health Concern</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HowDoPatientsLogin">   How Do Patients Log In</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Developer_Signup">   Developer Signup</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/FHIR_Sandboxes">   Sandboxes</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Smart%20on%20FHIR">   SMART on FHIR</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/REST_and_HTTP_considerations">   REST and HTTP considerations</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Helpful_resources">   Helpful resources</a>
+ 			</div>
+    </div>
+
+   <div class="content">
+        <h1 id="record-of-medication-being-taken-by-a-patient">Record of medication being taken by a patient</h1>
+<h2 id="retrieving-a-patient-s-medication-statements">Retrieving a patient’s medication statements</h2>
+<p>The logical ID (of the patient to retrieve) is passed as part of the URL.
+The logical ID is found as the result of a search.</p>
+<pre><code class="lang-bash hljs">GET https://tw171.open.allscripts.com/FHIR/Patient/id/MedicationStatement
+GET https://tw171.open.allscripts.com/FHIR/Patient/id/MedicationStatement?date=eq2016-01-01
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required?</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>yes</td>
+<td>URL</td>
+<td>Patient’s logical ID. This is retrieved using the search function.</td>
+</tr>
+<tr>
+<td>date</td>
+<td>no</td>
+<td>string</td>
+<td>A string representing a date to include in the search.  See below for more information.</td>
+</tr>
+</tbody>
+</table>
+<p>A DAF MedicationStatement is returned.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>identifier</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Identifier" target="_blank"></a></td>
+<td>0..*</td>
+<td>External identifier. FHIR will generate its own internal identifiers (probably URLs) which do not need to be explicitly managed by the resource. The identifier is one that would be used by another non-FHIR system. For example, an automated medication pump would provide a record each time it operated; an administration while the patient was off the ward might be made with a different system and entered after the event. This is particularly important if these records have to be updated.</td>
+</tr>
+<tr>
+<td>patient</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Patient.html" target="_blank">Patient</a>)</td>
+<td>1..1</td>
+<td>Patient who is or was taking  the medication. Defines constraints and extensions on the patient resource for use in querying and retrieving patient demographic information.</td>
+</tr>
+<tr>
+<td>informationSource</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Patient.html" target="_blank">Patient</a>, <a href="https://www.hl7.org/fhir/Practitioner.html" target="_blank">Practitioner</a>, <a href="https://www.hl7.org/fhir/RelatedPerson.html" target="_blank">RelatedPerson</a>)</td>
+<td>0..1</td>
+<td>Person who provided the information about the taking of this medication.</td>
+</tr>
+<tr>
+<td>dateAsserted</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#dateTime" target="_blank">dateTime</a></td>
+<td>0..1</td>
+<td>Date and time when the statement was asserted.</td>
+</tr>
+<tr>
+<td>status</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#code" target="_blank">code</a></td>
+<td>1..1</td>
+<td>Valid entries include: Active, Completed, Entered-in-error, and Intended. For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/medication-statement-status" target="_blank">medication-statement-status</a>.</td>
+</tr>
+<tr>
+<td>wasNotTaken</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#boolean" target="_blank">boolean</a></td>
+<td>0..1</td>
+<td>Was the medication not taken? True if medication is/was not being taken.</td>
+</tr>
+<tr>
+<td>reasonNotTaken</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..*</td>
+<td>Instances are not expected or even encouraged to draw from the specified value set. The value set merely provides examples of the types of concepts intended to be included. A code indicating why the medication was not taken. A set of codes indicating the reason why the MedicationAdministration is negated. For example codes, see Reason Medication Not Given Codes. This value set has an inline code system <a href="http://hl7.org/fhir/reason-medication-not-given">http://hl7.org/fhir/reason-medication-not-given</a>, which defines the following codes: Code “a” - Display “None” - No reason known, Code “b” - Display “Away” - The patient was not available when the dose was scheduled, Code “c” - Display “Asleep” - The patient was asleep when the dose was scheduled, and Code “d” - Display “Vomit” - The patient was given the medication and immediately vomited it back.</td>
+</tr>
+<tr>
+<td>reasonForUseCodeableConcept</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td></td>
+</tr>
+<tr>
+<td>reasonForUseReference</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Condition.html" target="_blank">Condition</a>)</td>
+<td>0..1</td>
+<td></td>
+</tr>
+<tr>
+<td>effectiveDateTime</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#dateTime" target="_blank">dateTime</a></td>
+<td>0..1</td>
+<td>Date and time over which the medication was consumed.</td>
+</tr>
+<tr>
+<td>effectivePeriod</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Period" target="_blank">Period</a></td>
+<td>0..1</td>
+<td>Interval of time during which it is being asserted  that the patient was taking the medication (or was not taking, when the wasNotGiven element is true). If the medication is still being taken at the time the statement is recorded, the “end” date will be omitted.</td>
+</tr>
+<tr>
+<td>note</td>
+<td>string</td>
+<td>0..1</td>
+<td>Further information about the statement.</td>
+</tr>
+<tr>
+<td>supportingInformation</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Resource.html" target="_blank">Resource</a>)</td>
+<td>0..*</td>
+<td>Additional supporting information.</td>
+</tr>
+<tr>
+<td>medicationCodeableConcept</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>1..1</td>
+<td>Medication that was taken. Defines constraints and extensions on the Medication resource for use in querying and retrieving patient’s medication information.</td>
+</tr>
+<tr>
+<td>medicationReference</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Medication.html" target="_blank">Medication</a>)</td>
+<td>1..1</td>
+<td>Medication that was taken.</td>
+</tr>
+<tr>
+<td>dosage</td>
+<td></td>
+<td>0..*</td>
+<td>How the medication is/was used by the patient.</td>
+</tr>
+<tr>
+<td>– dosage.text</td>
+<td>string</td>
+<td>0..1</td>
+<td>Reported dosage information.</td>
+</tr>
+<tr>
+<td>– dosage.timing</td>
+<td>Hl7.Fhir.Model.Timing</td>
+<td>0..1</td>
+<td>When/how often was medication taken. The timing schedule for giving the medication to the patient. The Schedule data type allows many different expressions. For example, “Every 8 hours,” “Three times a day,” “1/2 an hour before breakfast for 10 days from 23-Dec 2011,” or “15 Oct 2013, 17 Oct 2013 and 1 Nov 2013”.</td>
+</tr>
+<tr>
+<td>– dosage.asNeededBoolean</td>
+<td>Boolean</td>
+<td>0..1</td>
+<td>Take “as needed” (for x).</td>
+</tr>
+<tr>
+<td>– dosage.asNeededCodeableConcept</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Take “as needed” (for x).</td>
+</tr>
+<tr>
+<td>– dosage.siteCodeableConcept</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Where (on body) medication is/was administered.  Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant. A coded specification of the anatomic site where the medication first enters the body. This identifies the body site at which the substance was administered. The codes SHOULD be taken from Vaccine Administered Body Site. All codes from system <a href="http://snomed.info/sct">http://snomed.info/sct</a>. The value set includes codes from the following code systems (actual value set has &gt; 1000 codes included): 91723000 - Anatomical structure (body structure), 280115004 - Acquired body structure (body structure), 258331007 - Anatomical site notations for tumor staging (body structure), 118956008 - Altered from its original anatomical structure (morphologic abnormality), or 91722005 - Entire physical anatomical entity (body structure).</td>
+</tr>
+<tr>
+<td>– dosage.siteReference</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/BodySite.html" target="_blank">BodySite</a>)</td>
+<td>0..1</td>
+<td>Where (on body) medication is/was administered.</td>
+</tr>
+<tr>
+<td>– dosage.route</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Route by which the medication entered the body. Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant. Route of Administration value set is based upon FDA Drug Registration and Listing Database (FDA Orange Book) which are used in FDA structured product and labelling (SPL). This value set includes codes as defined in <a href="http://ncimeta.nci.nih.gov/">http://ncimeta.nci.nih.gov</a>. </td>
+</tr>
+<tr>
+<td>– dosage.method</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Technique used to administer the medication.</td>
+</tr>
+<tr>
+<td>– dosage.quantityQuantity</td>
+<td>Quantity</td>
+<td>0..1</td>
+<td>Amount administered in one dose.</td>
+</tr>
+<tr>
+<td>– dosage.quantityRange</td>
+<td>Hl7.Fhir.Model.Range</td>
+<td>0..1</td>
+<td>Amount administered in one dose.</td>
+</tr>
+<tr>
+<td>– dosage.rateRatio</td>
+<td>Hl7.Fhir.Model.Ratio</td>
+<td>0..1</td>
+<td>Speed with which the medication was or will be introduced into the patient. Typically the rate for an infusion e.g. 100 ml per 1 hour or 100 ml/hr. May also be expressed as a rate per unit of time e.g. 500 ml per 2 hours. Currently we do not specify a default of ‘1’ in the denominator, but this is being discussed. Other examples: 200 mcg/min or 200 mcg/1 minute; 1 liter/8 hours.</td>
+</tr>
+<tr>
+<td>– dosage.rateRange</td>
+<td>Hl7.Fhir.Model.Range</td>
+<td>0..1</td>
+<td>Dose quantity per unit of time.</td>
+</tr>
+<tr>
+<td>– dosage.maxDosePerPeriod</td>
+<td>Hl7.Fhir.Model.Ratio</td>
+<td>0..1</td>
+<td>Maximum total quantity of a therapeutic substance that may be administered to a subject over the period of time. For example, 1000mg in 24 hours.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="searching-by-date">Searching by date</h3>
+<p>Dates are passed as query parameters on the URL. Since the URL parameters cannot handle comparators (for example, &gt;, &lt;=) these are passed in as part of the date.</p>
+<pre><code class="lang-javascript hljs">date=eq2016<span class="hljs-number">-01</span><span class="hljs-number">-01</span>
+date=gt2016<span class="hljs-number">-01</span><span class="hljs-number">-01</span>
+</code></pre>
+<p>The following comparators are supported:</p>
+<table>
+<thead>
+<tr>
+<th>Comparator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eq</td>
+<td>equal</td>
+</tr>
+<tr>
+<td>gt</td>
+<td>greater than</td>
+</tr>
+<tr>
+<td>ge</td>
+<td>greater than or equal</td>
+</tr>
+<tr>
+<td>lt</td>
+<td>less than</td>
+</tr>
+<tr>
+<td>le</td>
+<td>less than or equal</td>
+</tr>
+</tbody>
+</table>
+<p>To search for a date range, pass in the date twice.</p>
+<p>e.g. <code>date=ge2010-01-01&amp;date=le2010-12-31</code></p>
+<p>This search would include every day in the year 2010.</p>
+
+    </div>
+
+
+</body></html>

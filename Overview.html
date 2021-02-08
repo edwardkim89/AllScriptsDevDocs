@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://developer.allscripts.com/Content/fhir/content/overview/ -->
+<html lang="en" class="gr__developer_allscripts_com" sigplusextliteextension-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">    
+    <title>Overview</title>
+	<link rel="stylesheet" type="text/css" href="./Overview_files/main.css">
+    <link rel="stylesheet" href="./Overview_files/default.min.css">
+    <script src="./Overview_files/highlight.min.js.download"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body data-gr-c-s-loaded="true">
+	<div class="right-sidebar">
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/">   Home</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/overview">   Overview</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Authentication_and_Authorization">   Authentication and Authorization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/patient">   Patient</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Condition">   Condition (Problem)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Immunization">   Immunization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationStatement">   MedicationStatement</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/AllergyIntolerance">   AllergyIntolerance</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/SmokingStatus">   SmokingStatus</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationOrder">   MedicationOrder</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Results">   Laboratory Result Observationss</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/VitalSigns">   VitalSign</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Procedure">   Procedure</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Assessment_and_plan">   Assessment and Plan of Treatment</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/CareTeam">   Care Team</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DiagnosticReport">   Laboratory Result DiagnosticReport</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Goal">   Goal</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Device">   Implantable Devices/UDI</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DocumentReference">   DocumentReference (CCDA)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HealthConcern">   Health Concern</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HowDoPatientsLogin">   How Do Patients Log In</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Developer_Signup">   Developer Signup</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/FHIR_Sandboxes">   Sandboxes</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Smart%20on%20FHIR">   SMART on FHIR</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/REST_and_HTTP_considerations">   REST and HTTP considerations</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Helpful_resources">   Helpful resources</a>
+ 			</div>
+    </div>
+
+   <div class="content">
+        <h1 id="example-using-the-allscripts-sandbox-for-anonymous-access">Example: Using the Allscripts sandbox for anonymous access</h1>
+<p>Allscripts provides a sandbox environment that you can use for testing purposes. </p>
+<p><strong>Obtaining a token is not needed. The samples provided here use an unauthorized call.</strong></p>
+<p><strong>This endpoint is provided for convenience, and is intended to assist developers getting started with Allscripts FHIR API. All access to the Allscripts FHIR API will be secured in production environments.</strong></p>
+<p>See the example below for more information on getting an OAuth2 token.</p>
+<h2 id="step-1-search-for-a-patient">Step 1: Search for a patient</h2>
+<p>Once you have the bearer token, you can call the API. 
+Use it to search for a patient called Allison.</p>
+<pre><code class="lang-bash hljs">GET https://tw171.open.allscripts.com/FHIRanon/Patient?_summary=<span class="hljs-literal">true</span>&amp;given=Allison
+</code></pre>
+<p><em>Note: This example uses an anonymous endpoint, so you don’t need the bearer token.</em></p>
+<p>This returns a collection of patient references.</p>
+<p><em>Note: FHIR returns this collection as a bundle. When developing the app, you must consider the bundle, but it does not apply to this example.</em></p>
+<pre><code class="lang-javascript hljs">{
+<span class="hljs-string">"resourceType"</span>: <span class="hljs-string">"Bundle"</span>,
+<span class="hljs-string">"type"</span>: <span class="hljs-string">"searchset"</span>,
+<span class="hljs-string">"entry"</span>:[
+    {
+        <span class="hljs-string">"resource"</span>:{<span class="hljs-string">"resourceType"</span>: <span class="hljs-string">"Patient"</span>, <span class="hljs-string">"id"</span>: <span class="hljs-string">"47675"</span>, <span class="hljs-string">"language"</span>: <span class="hljs-string">""</span>, <span class="hljs-string">"text"</span>:{<span class="hljs-string">"status"</span>: <span class="hljs-string">"generated"</span>,…}
+    },
+    {
+        <span class="hljs-string">"resource"</span>:{<span class="hljs-string">"resourceType"</span>: <span class="hljs-string">"Patient"</span>, <span class="hljs-string">"id"</span>: <span class="hljs-string">"1556"</span>, <span class="hljs-string">"language"</span>: <span class="hljs-string">""</span>, <span class="hljs-string">"text"</span>:{<span class="hljs-string">"status"</span>: <span class="hljs-string">"generated"</span>,…}
+    },
+    {
+        <span class="hljs-string">"resource"</span>:{<span class="hljs-string">"resourceType"</span>: <span class="hljs-string">"Patient"</span>, <span class="hljs-string">"id"</span>: <span class="hljs-string">"27190"</span>, <span class="hljs-string">"language"</span>: <span class="hljs-string">""</span>, <span class="hljs-string">"text"</span>:{<span class="hljs-string">"status"</span>: <span class="hljs-string">"generated"</span>,…}
+    },
+    {
+        <span class="hljs-string">"resource"</span>:{<span class="hljs-string">"resourceType"</span>: <span class="hljs-string">"Patient"</span>, <span class="hljs-string">"id"</span>: <span class="hljs-string">"36530"</span>, <span class="hljs-string">"language"</span>: <span class="hljs-string">""</span>, <span class="hljs-string">"text"</span>:{<span class="hljs-string">"status"</span>: <span class="hljs-string">"generated"</span>,…}
+    }
+]}
+</code></pre>
+<h2 id="step-2-retrieve-a-patient">Step 2: Retrieve a patient</h2>
+<p>To retrieve the information for the patient with ID 19, issue the following request: </p>
+<pre><code class="lang-bash hljs">GET https://tw171.open.allscripts.com/FHIRanon/Patient/19
+</code></pre>
+<p><em>Note: This example uses an anonymous endpoint, so you don’t need the bearer token.</em></p>
+<p>This returns the patient information.</p>
+<pre><code class="lang-javascript hljs">{
+   <span class="hljs-string">"resourceType"</span>: <span class="hljs-string">"Bundle"</span>,
+   <span class="hljs-string">"type"</span>: <span class="hljs-string">"searchset"</span>,
+   <span class="hljs-string">"entry"</span>: [{<span class="hljs-string">"resource"</span>:    {
+      <span class="hljs-string">"resourceType"</span>: <span class="hljs-string">"Patient"</span>,
+      <span class="hljs-string">"id"</span>: <span class="hljs-string">"19"</span>,
+      <span class="hljs-string">"extension"</span>:       [
+                  {
+            <span class="hljs-string">"url"</span>: <span class="hljs-string">"http://hl7.org/fhir/StructureDefinition/us-core-race"</span>,
+            <span class="hljs-string">"valueCodeableConcept"</span>: {<span class="hljs-string">"coding"</span>: [            {
+               <span class="hljs-string">"system"</span>: <span class="hljs-string">"OBM"</span>,
+               <span class="hljs-string">"code"</span>: <span class="hljs-string">"0"</span>,
+               <span class="hljs-string">"display"</span>: <span class="hljs-string">" "</span>
+            }]}
+         },
+                  {
+            <span class="hljs-string">"url"</span>: <span class="hljs-string">"http://hl7.org/fhir/StructureDefinition/us-core-ethnicity"</span>,
+            <span class="hljs-string">"valueCodeableConcept"</span>: {<span class="hljs-string">"coding"</span>: [            {
+               <span class="hljs-string">"system"</span>: <span class="hljs-string">"OBM"</span>,
+               <span class="hljs-string">"code"</span>: <span class="hljs-string">"0"</span>,
+               <span class="hljs-string">"display"</span>: <span class="hljs-string">""</span>
+            }]}
+         },
+                  {
+            <span class="hljs-string">"url"</span>: <span class="hljs-string">"http://hl7.org/fhir/StructureDefinition/us-core-religion"</span>,
+            <span class="hljs-string">"valueCodeableConcept"</span>: {<span class="hljs-string">"coding"</span>: [            {
+               <span class="hljs-string">"code"</span>: <span class="hljs-string">"          "</span>,
+               <span class="hljs-string">"display"</span>: <span class="hljs-string">" "</span>
+            }]}
+         }
+      ],
+      <span class="hljs-string">"identifier"</span>: [      {
+         <span class="hljs-string">"type"</span>:          {
+            <span class="hljs-string">"coding"</span>:             [
+                              {
+                  <span class="hljs-string">"code"</span>: <span class="hljs-string">"ZZZTW01"</span>,
+                  <span class="hljs-string">"display"</span>: <span class="hljs-string">"ZZZTW01"</span>,
+                  <span class="hljs-string">"userSelected"</span>: <span class="hljs-literal">false</span>
+               },
+                              {
+                  <span class="hljs-string">"code"</span>: <span class="hljs-string">"4         "</span>,
+                  <span class="hljs-string">"display"</span>: <span class="hljs-string">"Other"</span>,
+                  <span class="hljs-string">"userSelected"</span>: <span class="hljs-literal">false</span>
+               }
+            ],
+            <span class="hljs-string">"text"</span>: <span class="hljs-string">"TouchWorks MRN"</span>
+         },
+         <span class="hljs-string">"system"</span>: <span class="hljs-string">"dummy identifier system"</span>,
+         <span class="hljs-string">"value"</span>: <span class="hljs-string">"ZZZTW01"</span>,
+         <span class="hljs-string">"assigner"</span>: {<span class="hljs-string">"reference"</span>: <span class="hljs-string">"Organization/3"</span>}
+      }],
+      <span class="hljs-string">"active"</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-string">"name"</span>: [      {
+         <span class="hljs-string">"text"</span>: <span class="hljs-string">"Allscripts,Allison "</span>,
+         <span class="hljs-string">"family"</span>: [<span class="hljs-string">"Allscripts"</span>],
+         <span class="hljs-string">"given"</span>: [<span class="hljs-string">"Allison"</span>],
+         <span class="hljs-string">"prefix"</span>: [<span class="hljs-string">"     "</span>],
+         <span class="hljs-string">"suffix"</span>: [<span class="hljs-string">"     "</span>]
+      }],
+      <span class="hljs-string">"telecom"</span>:       [
+                  {
+            <span class="hljs-string">"system"</span>: <span class="hljs-string">"phone"</span>,
+            <span class="hljs-string">"value"</span>: <span class="hljs-string">"(312) 555-1112"</span>,
+            <span class="hljs-string">"use"</span>: <span class="hljs-string">"home"</span>
+         },
+                  {
+            <span class="hljs-string">"system"</span>: <span class="hljs-string">"phone"</span>,
+            <span class="hljs-string">"value"</span>: <span class="hljs-string">"(847) 608-3515x4357 "</span>,
+            <span class="hljs-string">"use"</span>: <span class="hljs-string">"work"</span>
+         },
+                  {
+            <span class="hljs-string">"system"</span>: <span class="hljs-string">"fax"</span>,
+            <span class="hljs-string">"value"</span>: <span class="hljs-string">"(708) 555-1001"</span>
+         },
+                  {
+            <span class="hljs-string">"system"</span>: <span class="hljs-string">"email"</span>,
+            <span class="hljs-string">"value"</span>: <span class="hljs-string">"allison@allscripts.com"</span>
+         }
+      ],
+      <span class="hljs-string">"gender"</span>: <span class="hljs-string">"female"</span>,
+      <span class="hljs-string">"birthDate"</span>: <span class="hljs-string">"1973-03-05"</span>,
+      <span class="hljs-string">"deceasedBoolean"</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-string">"address"</span>: [      {
+         <span class="hljs-string">"text"</span>: <span class="hljs-string">"34 Smith Mt. Road. Apartment 1 Springfield IL 60654      USA"</span>,
+         <span class="hljs-string">"line"</span>:          [
+            <span class="hljs-string">"34 Smith Mt. Road."</span>,
+            <span class="hljs-string">"Apartment 1"</span>
+         ],
+         <span class="hljs-string">"city"</span>: <span class="hljs-string">"Springfield"</span>,
+         <span class="hljs-string">"state"</span>: <span class="hljs-string">"IL"</span>,
+         <span class="hljs-string">"postalCode"</span>: <span class="hljs-string">"60654     "</span>,
+         <span class="hljs-string">"country"</span>: <span class="hljs-string">"USA"</span>
+      }],
+      <span class="hljs-string">"maritalStatus"</span>: {<span class="hljs-string">"coding"</span>: [      {
+         <span class="hljs-string">"system"</span>: <span class="hljs-string">"http://hl7.org/fhir/v3/vs/MaritalStatus"</span>,
+         <span class="hljs-string">"code"</span>: <span class="hljs-string">"W"</span>,
+         <span class="hljs-string">"display"</span>: <span class="hljs-string">"Widowed"</span>
+      }]},
+      <span class="hljs-string">"multipleBirthBoolean"</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-string">"contact"</span>:       [
+                  {
+            <span class="hljs-string">"relationship"</span>: [{<span class="hljs-string">"coding"</span>: [            {
+               <span class="hljs-string">"code"</span>: <span class="hljs-string">"4         "</span>,
+               <span class="hljs-string">"display"</span>: <span class="hljs-string">"Other"</span>
+            }]}],
+            <span class="hljs-string">"name"</span>:             {
+               <span class="hljs-string">"text"</span>: <span class="hljs-string">"Washington George"</span>,
+               <span class="hljs-string">"family"</span>: [<span class="hljs-string">"Washington"</span>],
+               <span class="hljs-string">"given"</span>: [<span class="hljs-string">"George"</span>]
+            },
+            <span class="hljs-string">"telecom"</span>:             [
+                              {
+                  <span class="hljs-string">"system"</span>: <span class="hljs-string">"other"</span>,
+                  <span class="hljs-string">"value"</span>: <span class="hljs-string">"(312) 555-1101"</span>,
+                  <span class="hljs-string">"use"</span>: <span class="hljs-string">"home"</span>
+               },
+                              {
+                  <span class="hljs-string">"system"</span>: <span class="hljs-string">"other"</span>,
+                  <span class="hljs-string">"value"</span>: <span class="hljs-string">"(773) 555-1201x1101"</span>,
+                  <span class="hljs-string">"use"</span>: <span class="hljs-string">"work"</span>
+               }
+            ],
+            <span class="hljs-string">"address"</span>:             {
+               <span class="hljs-string">"line"</span>:                [
+                  <span class="hljs-string">"123 Waulnut Street"</span>,
+                  <span class="hljs-string">"Apartment 2E"</span>
+               ],
+               <span class="hljs-string">"city"</span>: <span class="hljs-string">"dummy address city"</span>,
+               <span class="hljs-string">"state"</span>: <span class="hljs-string">"dummy address state"</span>,
+               <span class="hljs-string">"postalCode"</span>: <span class="hljs-string">"dummy address postal code"</span>,
+               <span class="hljs-string">"country"</span>: <span class="hljs-string">"dummy address country"</span>
+            }
+         },
+                  {
+            <span class="hljs-string">"relationship"</span>: [{<span class="hljs-string">"coding"</span>: [            {
+               <span class="hljs-string">"code"</span>: <span class="hljs-string">"4         "</span>,
+               <span class="hljs-string">"display"</span>: <span class="hljs-string">"Other"</span>
+            }]}],
+            <span class="hljs-string">"name"</span>:             {
+               <span class="hljs-string">"text"</span>: <span class="hljs-string">"Adams Abigail"</span>,
+               <span class="hljs-string">"family"</span>: [<span class="hljs-string">"Adams"</span>],
+               <span class="hljs-string">"given"</span>: [<span class="hljs-string">"Abigail"</span>]
+            },
+            <span class="hljs-string">"telecom"</span>:             [
+                              {
+                  <span class="hljs-string">"system"</span>: <span class="hljs-string">"other"</span>,
+                  <span class="hljs-string">"value"</span>: <span class="hljs-string">"(312) 555-7701x8850"</span>,
+                  <span class="hljs-string">"use"</span>: <span class="hljs-string">"work"</span>
+               },
+                              {
+                  <span class="hljs-string">"system"</span>: <span class="hljs-string">"other"</span>,
+                  <span class="hljs-string">"value"</span>: <span class="hljs-string">"(847) 555-9901"</span>,
+                  <span class="hljs-string">"use"</span>: <span class="hljs-string">"home"</span>
+               }
+            ],
+            <span class="hljs-string">"address"</span>:             {
+               <span class="hljs-string">"line"</span>:                [
+                  <span class="hljs-string">"123 Main Street"</span>,
+                  <span class="hljs-string">"Apartment 41"</span>
+               ],
+               <span class="hljs-string">"city"</span>: <span class="hljs-string">"dummy address city"</span>,
+               <span class="hljs-string">"state"</span>: <span class="hljs-string">"dummy address state"</span>,
+               <span class="hljs-string">"postalCode"</span>: <span class="hljs-string">"dummy address postal code"</span>,
+               <span class="hljs-string">"country"</span>: <span class="hljs-string">"dummy address country"</span>
+            }
+         }
+      ],
+      <span class="hljs-string">"communication"</span>: [{<span class="hljs-string">"language"</span>: {<span class="hljs-string">"coding"</span>: [      {
+         <span class="hljs-string">"system"</span>: <span class="hljs-string">"ISO-639-2"</span>,
+         <span class="hljs-string">"code"</span>: <span class="hljs-string">"eng       "</span>,
+         <span class="hljs-string">"display"</span>: <span class="hljs-string">"English"</span>
+      }]}}],
+      <span class="hljs-string">"careProvider"</span>: [      {
+         <span class="hljs-string">"reference"</span>: <span class="hljs-string">"Practitioner/53"</span>,
+         <span class="hljs-string">"display"</span>: <span class="hljs-string">"Allscripts,Family Medicine "</span>
+      }]
+   }}]
+}
+</code></pre>
+<h1 id="example-using-the-allscripts-sandbox-for-secured-access">Example: Using the Allscripts sandbox for secured access</h1>
+<h2 id="step-1-signup-for-a-developer-account-and-register-the-app">Step 1: Signup for a developer account and register the app</h2>
+<p>If you have not already completed this step, follow the instructions in <a href="https://developer.allscripts.com/Content/fhir/content/Developer_Signup/index.html">Developer Signup and Application Registration</a> to register your application.</p>
+<p>After the registration, you should have the following:</p>
+<ul>
+<li><code>ClientId</code></li>
+<li><code>Secret</code></li>
+<li><code>redirect_uri</code> <ul>
+<li>You provide this. The is the URL where the application will reside once authorization is completed.<ul>
+<li>If you have a mobile application, use <code>urn:ietf:wg:oauth:2.0:oob</code>.</li>
+<li>If you have a web application, use the approrpiate URL.</li>
+<li>If you are testing with SOAP UI, use <code>http://localhost/callback</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="step-2-obtain-a-bearer-token">Step 2: Obtain a bearer token</h2>
+<p>You must use the OAuth 2.0 authorization client that is built into the framework you are using. Refer to: <a href="https://developer.allscripts.com/Content/fhir/content/Helpful_resources/index.html">Helpful resources</a>.</p>
+<p><em>Note: The examples provided use a TouchWorks EHR FHIR sandbox. See <a href="https://developer.allscripts.com/Content/fhir/content/FHIR_Sandboxes/index.html">Sandboxes</a> for sandboxes available for other Allscripts products including Sunrise and Professional EHR.</em></p>
+<p>Review the following data items:</p>
+<ul>
+<li><code>OAuth 2 Flow</code>: <code>Authentication Code Grant</code></li>
+<li><code>Authorization URI</code>: <code>https://tw171.open.allscripts.com/authorization/connect/authorize</code></li>
+<li><code>Token URI</code>: <code>https://tw171.open.allscripts.com/authorization/connect/token</code></li>
+</ul>
+<p>Your OAuth 2.0 authorization client issues a request similar to the following:</p>
+<pre><code class="lang-http hljs"><span class="hljs-attribute">https://tw171.open.allscripts.com/authorization/connect/authorize?response_type=code&amp;client_id=&lt;your ClientID&gt;&amp;redirect_uri=&lt;your redirect_uri&gt;&amp;scope=launch%20openid%20profile
+</span></code></pre>
+<p>The Authrorization Server requests your credentials. Use the following:</p>
+<ul>
+<li>Username: <code>jmedici</code></li>
+<li>Password: <code>password01</code></li>
+</ul>
+<p>After you have entered the username and password, the OAuth 2.0 authorization client issues a request to the token endpoint to get the authrorization token. Enter the secret that was provided earlier.</p>
+<p>You now have an authorization token that you can use in subsequent calls.</p>
+<p>Call the authorization server to get a bearer token.</p>
+<p>The authorization server returns a JSON structure:</p>
+<pre><code class="lang-javascript hljs">{
+    <span class="hljs-string">"access_token"</span> :  <span class="hljs-number">123.456</span><span class="hljs-number">.7890</span>
+    <span class="hljs-string">"expires_in"</span>: <span class="hljs-number">1200</span>,
+    <span class="hljs-string">"token_type"</span>: <span class="hljs-string">"Bearer"</span>    
+}
+</code></pre>
+<p>There are other values returned, but they are not used in this example.</p>
+<p>The authorization token is is a JSON Web Token (JWT). It uses the format:</p>
+<p>nnn.nn.nnnn.</p>
+<p>Bearer tokens are valid for a short time, typically 20 minutes. If the bearer token expires, you must refresh it.</p>
+<h2 id="step-3-retrieve-a-patient">Step 3: Retrieve a patient</h2>
+<p>To retrieve information for the patient with ID 19, issue the following request:</p>
+<pre><code class="lang-bash hljs">GET https://tw171.open.allscripts.com/FHIR/Patient/19  
+Authorization: Bearer 123.456.7890
+</code></pre>
+<p>The Bearer token is retrieved in the previous step. It is used in the authorization header. </p>
+<p>This returns the patient.</p>
+
+    </div>
+
+
+</body></html>

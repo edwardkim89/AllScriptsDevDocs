@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)https://developer.allscripts.com/Content/fhir/content/AllergyIntolerance/ -->
+<html lang="en" class="gr__developer_allscripts_com" sigplusextliteextension-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">    
+    <title>AllergyIntolerance</title>
+	<link rel="stylesheet" type="text/css" href="./AllergyIntolerance_files/main.css">
+    <link rel="stylesheet" href="./AllergyIntolerance_files/default.min.css">
+    <script src="./AllergyIntolerance_files/highlight.min.js.download"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body data-gr-c-s-loaded="true">
+	<div class="right-sidebar">
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/">   Home</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/overview">   Overview</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Authentication_and_Authorization">   Authentication and Authorization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/patient">   Patient</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Condition">   Condition (Problem)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Immunization">   Immunization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationStatement">   MedicationStatement</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/AllergyIntolerance">   AllergyIntolerance</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/SmokingStatus">   SmokingStatus</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationOrder">   MedicationOrder</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Results">   Laboratory Result Observationss</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/VitalSigns">   VitalSign</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Procedure">   Procedure</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Assessment_and_plan">   Assessment and Plan of Treatment</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/CareTeam">   Care Team</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DiagnosticReport">   Laboratory Result DiagnosticReport</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Goal">   Goal</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Device">   Implantable Devices/UDI</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DocumentReference">   DocumentReference (CCDA)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HealthConcern">   Health Concern</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HowDoPatientsLogin">   How Do Patients Log In</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Developer_Signup">   Developer Signup</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/FHIR_Sandboxes">   Sandboxes</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Smart%20on%20FHIR">   SMART on FHIR</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/REST_and_HTTP_considerations">   REST and HTTP considerations</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Helpful_resources">   Helpful resources</a>
+ 			</div>
+    </div>
+
+   <div class="content">
+        <h1 id="allergy-or-intolerance-generally-risk-of-adverse-reaction-to-a-substance-">Allergy or intolerance (generally: risk of adverse reaction to a substance)</h1>
+<h2 id="retrieving-a-patient-s-allergy-intolerances">Retrieving a patient’s allergy intolerances</h2>
+<p>The logical ID (of the patient to retrieve) is passed as part of the URL.
+The logical ID is found as the result of a search.</p>
+<pre><code class="lang-bash hljs">GET https://tw171.open.allscripts.com/FHIR/Patient/id/AllergyIntolerance
+GET https://tw171.open.allscripts.com/FHIR/Patient/id/AllergyIntolerance?date=eq2016-01-01
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required?</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>yes</td>
+<td>URL</td>
+<td>The logical ID of the patient. This is retrieved using the search function.</td>
+</tr>
+<tr>
+<td>date</td>
+<td>no</td>
+<td>string</td>
+<td>A string representing a date to include in the search.  See below for more information.</td>
+</tr>
+</tbody>
+</table>
+<p>A DAF AllergyIntolerance is returned.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>identifier</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Identifier" target="_blank"></a></td>
+<td>0..*</td>
+<td>Identifier associated with the allergy/intolerance concern that are defined by the business processes and/or used to refer to it when a direct URL reference to the resource is not appropriate. For example, in CDA documents or in written/printed documentation.</td>
+</tr>
+<tr>
+<td>onset</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#dateTime" target="_blank">dateTime</a></td>
+<td>0..1</td>
+<td>Date and/or time of the onset of the allergy or intolerance.</td>
+</tr>
+<tr>
+<td>recordedDate</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#dateTime" target="_blank">dateTime</a></td>
+<td>0..1</td>
+<td>Date when the sensitivity was recorded.</td>
+</tr>
+<tr>
+<td>recorder</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Practitioner.html" target="_blank">Practitioner</a>, <a href="https://www.hl7.org/fhir/Patient.html" target="_blank">Patient</a>)</td>
+<td>0..1</td>
+<td>Individual who recorded the allergy and takes responsibility for its content. Options include either DAF-Practitioner profile or DAF-Patient profile.</td>
+</tr>
+<tr>
+<td>patient</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Patient.html" target="_blank">Patient</a>)</td>
+<td>1..1</td>
+<td>Defines constraints and extensions on the patient resource for use in querying and retrieving patient demographic information.</td>
+</tr>
+<tr>
+<td>reporter</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Patient.html" target="_blank">Patient</a>, <a href="https://www.hl7.org/fhir/RelatedPerson.html" target="_blank">RelatedPerson</a>, <a href="https://www.hl7.org/fhir/Practitioner.html" target="_blank">Practitioner</a>)</td>
+<td>0..1</td>
+<td>Source of the information about the allergy that is recorded.</td>
+</tr>
+<tr>
+<td>substance</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>1..1</td>
+<td>Identification of a substance or class of substances that is considered to be responsible for the adverse reaction risk. AllergyIntolerance.substance has an extensible binding to a value set consisting of: NDF-RT (codes for drug class allergies), RXNORM (codes limited to term types- TTY- such as BN or Brand Name, IN or Ingredient, MIN or multiple ingredient, and PIN or precise ingredient for drug ingredient allergies) or SNOMED CT (used when no other code from the other code systems is appropriate, such as No Known Allergies, No Known Food Allergies, No Known Drug Allergies, or No Known Environmental Allergies). For more information on this value set, see: <a href="http://hl7.org/fhir/ValueSet/allergyintolerance-substance-code">http://hl7.org/fhir/ValueSet/allergyintolerance-substance-code</a>.</td>
+</tr>
+<tr>
+<td>status</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#code" target="_blank">code</a></td>
+<td>0..1</td>
+<td>Assertion about certainty associated with the propensity or potential risk of a reaction to the identified substance. The codes shall be taken from the AllergyIntoleranceStatus value set which includes: Active, Unconfirmed, Confirmed, Inactive, Resolved, Refuted, and Entered in Error. Decision support would typically raise alerts for Unconfirmed, Confirmed, and Resolved and ignore a Refuted reaction. In particular, Refuted may be useful for reconciliation of the Adverse Reaction List. Conformance is required and as such, some implementations may choose to make this field mandatory. For more information on this value set, see: <a href="http://hl7.org/fhir/ValueSet/allergy-intolerance-status">http://hl7.org/fhir/ValueSet/allergy-intolerance-status</a>.</td>
+</tr>
+<tr>
+<td>criticality</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#code" target="_blank">code</a></td>
+<td>0..1</td>
+<td>Estimate of the potential clinical harm or seriousness of the reaction to the identified substance. The codes shall be taken from the AllergyIntoleranceCriticality value set with required conformance and include: CRITL-Low, CRITH-High, and CRITU-Unable to determine. For more information on this value set, see: <a href="http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality">http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality</a>.</td>
+</tr>
+<tr>
+<td>type</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#code" target="_blank">code</a></td>
+<td>0..1</td>
+<td>Identification of the underlying physiological mechanism for a reaction risk. This value set includes two types: Allergy or Intolerance.  For more information on this value set, see: <a href="http://hl7.org/fhir/ValueSet/allergy-intolerance-type">http://hl7.org/fhir/ValueSet/allergy-intolerance-type</a>.</td>
+</tr>
+<tr>
+<td>category</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#code" target="_blank">code</a></td>
+<td>0..1</td>
+<td>Category of the allergy. Options include: Food, Medication, Environment, and Other. For more information on this value set, see: <a href="http://hl7.org/fhir/ValueSet/allergy-intolerance-category">http://hl7.org/fhir/ValueSet/allergy-intolerance-category</a>.</td>
+</tr>
+<tr>
+<td>lastOccurence</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#dateTime" target="_blank">dateTime</a></td>
+<td>0..1</td>
+<td>Date and time of the last known occurrence of the reaction.</td>
+</tr>
+<tr>
+<td>note</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Annotation" target="_blank">Annotation</a></td>
+<td>0..1</td>
+<td>Additional text not captured in other fields.</td>
+</tr>
+<tr>
+<td>reaction</td>
+<td>Backbone element - <a href="http://www.hl7.org/fhir/daf/daf-allergyintolerance-definitions.html#daf-allergyintolerance.AllergyIntolerance.reaction">http://www.hl7.org/fhir/daf/daf-allergyintolerance-definitions.html#daf-allergyintolerance.AllergyIntolerance.reaction</a></td>
+<td>0..*</td>
+<td>Details about each adverse reaction event linked to exposure to the identified substance.</td>
+</tr>
+<tr>
+<td>– reaction.substance</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Identification of the specific substance considered to be responsible for the adverse reaction event. Note: The substance for a specific reaction may be different from the substance identified as the cause of the risk, but must be consistent with it. For instance, it may be a more specific substance such as a brand medication or a composite substance that includes the identified substance. It must be clinically safe to only process the AllergyIntolerance.substance and ignore the AllergyIntolerance.event.substance. For more information on this value set, see: <a href="http://hl7.org/fhir/ValueSet/substance-code">http://hl7.org/fhir/ValueSet/substance-code</a>.</td>
+</tr>
+<tr>
+<td>– reaction.manifestation</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>1..*</td>
+<td>Clinical symptoms and signs associated with the event. For more information on this value set, see: <a href="http://hl7.org/fhir/ValueSet/manifestation-codes">http://hl7.org/fhir/ValueSet/manifestation-codes</a>.</td>
+</tr>
+<tr>
+<td>– reaction.description</td>
+<td>string</td>
+<td>0..1</td>
+<td>Description of the event as a whole.</td>
+</tr>
+<tr>
+<td>– reaction.onset</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#dateTime" target="_blank">dateTime</a></td>
+<td>0..1</td>
+<td>Date and time when manifestations showed.</td>
+</tr>
+<tr>
+<td>– reaction.severity</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#code" target="_blank">code</a></td>
+<td>0..1</td>
+<td>Severity of the reaction or of the event as a whole. Options include: Mild, Moderate, or Severe. For more information on this value set, see: <a href="http://hl7.org/fhir/ValueSet/reaction-event-severity">http://hl7.org/fhir/ValueSet/reaction-event-severity</a>.</td>
+</tr>
+<tr>
+<td>– reaction.exposureRoute</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>How the subject was exposed to the substance. For more information on this value set, see: <a href="http://hl7.org/fhir/ValueSet/route-codes">http://hl7.org/fhir/ValueSet/route-codes</a>.</td>
+</tr>
+<tr>
+<td>– reaction.note</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Annotation" target="_blank">Annotation</a></td>
+<td>0..1</td>
+<td>Text about the event not captured in other fields.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="searching-by-date">Searching by date</h3>
+<p>Dates are passed in as query parameters in the URL. Since the URL parameters cannot handle comparators (for example, &gt;, &lt;=) these are passed  as part of the date.</p>
+<pre><code class="lang-javascript hljs">date=eq2016<span class="hljs-number">-01</span><span class="hljs-number">-01</span>
+date=gt2016<span class="hljs-number">-01</span><span class="hljs-number">-01</span>
+</code></pre>
+<p>The following comparators are supported:</p>
+<table>
+<thead>
+<tr>
+<th>Comparator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eq</td>
+<td>equal</td>
+</tr>
+<tr>
+<td>gt</td>
+<td>greater than</td>
+</tr>
+<tr>
+<td>ge</td>
+<td>greater than or equal</td>
+</tr>
+<tr>
+<td>lt</td>
+<td>less than</td>
+</tr>
+<tr>
+<td>le</td>
+<td>less than or equal</td>
+</tr>
+</tbody>
+</table>
+<p>To search for a date range, pass the date twice.</p>
+<p>For example: <code>date=ge2010-01-01&amp;date=le2010-12-31</code>
+This search would include every day in the year 2010.</p>
+
+    </div>
+
+
+</body></html>

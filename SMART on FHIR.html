@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)https://developer.allscripts.com/Content/fhir/content/Smart%20on%20FHIR/ -->
+<html lang="en" class="gr__developer_allscripts_com" sigplusextliteextension-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">    
+    <title>SMART on FHIR</title>
+	<link rel="stylesheet" type="text/css" href="./SMART on FHIR_files/main.css">
+    <link rel="stylesheet" href="./SMART on FHIR_files/default.min.css">
+    <script src="./SMART on FHIR_files/highlight.min.js.download"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body data-gr-c-s-loaded="true">
+	<div class="right-sidebar">
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/">   Home</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/overview">   Overview</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Authentication_and_Authorization">   Authentication and Authorization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/patient">   Patient</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Condition">   Condition (Problem)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Immunization">   Immunization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationStatement">   MedicationStatement</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/AllergyIntolerance">   AllergyIntolerance</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/SmokingStatus">   SmokingStatus</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationOrder">   MedicationOrder</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Results">   Laboratory Result Observationss</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/VitalSigns">   VitalSign</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Procedure">   Procedure</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Assessment_and_plan">   Assessment and Plan of Treatment</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/CareTeam">   Care Team</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DiagnosticReport">   Laboratory Result DiagnosticReport</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Goal">   Goal</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Device">   Implantable Devices/UDI</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DocumentReference">   DocumentReference (CCDA)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HealthConcern">   Health Concern</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HowDoPatientsLogin">   How Do Patients Log In</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Developer_Signup">   Developer Signup</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/FHIR_Sandboxes">   Sandboxes</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Smart%20on%20FHIR">   SMART on FHIR</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/REST_and_HTTP_considerations">   REST and HTTP considerations</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Helpful_resources">   Helpful resources</a>
+ 			</div>
+    </div>
+
+   <div class="content">
+        <h2 id="introduction">Introduction</h2>
+<p>SMART on FHIR is a way of launching FHIR application, in which context is shared, for example which patient to use.</p>
+<p>More information can be found on the SMART on FHIR Websites <a href="http://docs.smarthealthit.org/authorization/" target="_blank">here</a> and <a href="http://docs.smarthealthit.org/authorization/scopes-and-launch-context/" target="_blank">here</a></p>
+<p>SMART on FHIR defines two launch sequences, EHR Launch and Standalone Launch.</p>
+<h2 id="standalone-launch">Standalone Launch</h2>
+<p>Standalone launch is when a SMART on FHIR application is launched outside of an EHR context. The cannonical example of this is a Patient Facing Web App. When the user starts the App, the App has no idea who the patient is.</p>
+<p>To start a Standalone launch, add the following to your scope <code>launch/patient</code> during authorization</p>
+<p>The Patient will be directed to the Main Authorization Screen.  This is the Authorization screen that is returned when you query for the metadata.</p>
+<p><img src="./SMART on FHIR_files/SMARTOnFhirProviderLogin.png" alt="SMART on FHIR Provider Login"></p>
+<p>When the Patient clicks on the “Are you a Patient?” button, they will be taken to the FollowMyHealth Login screen if the Healthcare Organization uses FollowMyHealth, or to the Allscripts Health Connect Login if they do not.</p>
+<p>SMART on FHIR Patient Login with FollowMyHealth
+<img src="./SMART on FHIR_files/SMARTOnFhirPatientLoginFMH.png" alt="SMART on FHIR Patient Login with FMH"></p>
+<p>SMART on FHIR Patient Login with Allscripts Health Connect
+<img src="./SMART on FHIR_files/SMARTOnFhirPatientLoginAHC.png" alt="SMART on FHIR Patient Login with AHC"></p>
+<p>If the patient is a proxy for another patient, e.g. a mother getting data for her child, then the user will be able to select the patient who’se data they want to access.</p>
+<p>Once the patient authenticates, the patient id is returned in the token Response</p>
+<pre><code class="lang-javascript hljs">{
+  access_token: <span class="hljs-string">"secret-xyz"</span>,
+  patient: <span class="hljs-string">"54520"</span>,
+  ...
+}
+</code></pre>
+<p>Patient Login information for the various Sandboxes can be found on the <a href="https://developer.allscripts.com/Content/fhir/content/FHIR_Sandboxes/index.html">Sandboxes</a> page.</p>
+<h2 id="ehr-launch">EHR Launch</h2>
+<p>EHR Launch is when a Provider launches a SMART on FHIR Application from within the EHR. You will not be able to test this directly in the Allscripts EHR, but you are able to perform a test launch.</p>
+<p>We pass the patient id in the launch parameter: 
+e.g. <a href="https://my.smartonfhirapp.org/launch.html?">https://my.SMARTonfhirapp.org/launch.html?</a><mark>launch=patID</mark>&amp;iss=<a href="https://pro171.open.allscripts.com/FHIR">https://pro171.open.allscripts.com/FHIR</a></p>
+<ul>
+<li>Please note that <a href="https://my.onfhirapp.org/">https://my.onfhirapp.org</a> is an example and you need to replace it with your URL</li>
+</ul>
+<p>The Launch URLs for our test apps would be:</p>
+<h3 id="fhir-dstu-2">FHIR DSTU 2</h3>
+<p>Professional 17.1: <a href="https://my.smartonfhirapp.org/launch.html?launch=54520&amp;iss=https://pro171.open.allscripts.com/FHIR">https://my.smartonfhirapp.org/launch.html?launch=54520&amp;iss=https://pro171.open.allscripts.com/FHIR</a>.
+Credentials are terry / manning</p>
+<p>Touchworks 17.1: <a href="https://my.smartonfhirapp.org/launch.html?launch=19&amp;iss=https://tw171.open.allscripts.com/FHIR">https://my.smartonfhirapp.org/launch.html?launch=19&amp;iss=https://tw171.open.allscripts.com/FHIR</a>.
+Credentials are jmedici / password01</p>
+<p>Sunrise 16.3 Dev:  <a href="https://my.smartonfhirapp.org/launch.html?launch=385800201&amp;iss=https://scm163dev.open.allscripts.com/FHIR">https://my.smartonfhirapp.org/launch.html?launch=385800201&amp;iss=https://scm163dev.open.allscripts.com/FHIR</a>.
+Credentials are james/ Password#1</p>
+<h3 id="fhir-stu-3">FHIR STU 3</h3>
+<p>Touchworks Latest Dev:  <a href="https://my.smartonfhirapp.org/launch.html?launch=19&amp;iss=https://twdev.open.allscripts.com/FHIR">https://my.smartonfhirapp.org/launch.html?launch=19&amp;iss=https://twdev.open.allscripts.com/FHIR</a>.
+Credentials are jmedici / password01</p>
+
+    </div>
+
+
+</body></html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://developer.allscripts.com/Content/fhir/content/Goal/ -->
+<html lang="en" sigplusextliteextension-installed="true" class="gr__developer_allscripts_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">    
+    <title>Goal</title>
+	<link rel="stylesheet" type="text/css" href="./Goal_files/main.css">
+    <link rel="stylesheet" href="./Goal_files/default.min.css">
+    <script src="./Goal_files/highlight.min.js.download"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body data-gr-c-s-loaded="true">
+	<div class="right-sidebar">
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/">   Home</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/overview">   Overview</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Authentication_and_Authorization">   Authentication and Authorization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/patient">   Patient</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Condition">   Condition (Problem)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Immunization">   Immunization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationStatement">   MedicationStatement</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/AllergyIntolerance">   AllergyIntolerance</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/SmokingStatus">   SmokingStatus</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationOrder">   MedicationOrder</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Results">   Laboratory Result Observationss</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/VitalSigns">   VitalSign</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Procedure">   Procedure</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Assessment_and_plan">   Assessment and Plan of Treatment</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/CareTeam">   Care Team</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DiagnosticReport">   Laboratory Result DiagnosticReport</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Goal">   Goal</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Device">   Implantable Devices/UDI</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DocumentReference">   DocumentReference (CCDA)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HealthConcern">   Health Concern</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HowDoPatientsLogin">   How Do Patients Log In</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Developer_Signup">   Developer Signup</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/FHIR_Sandboxes">   Sandboxes</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Smart%20on%20FHIR">   SMART on FHIR</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/REST_and_HTTP_considerations">   REST and HTTP considerations</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Helpful_resources">   Helpful resources</a>
+ 			</div>
+    </div>
+
+   <div class="content">
+        <h1 id="intended-objective-s-for-a-patient-group-or-organization">Intended objective(s) for a patient, group or organization</h1>
+<h2 id="retrieving-a-patient-s-goals">Retrieving a patient’s goals</h2>
+<p>The logical ID (of the patient to retrieve) is passed as part of the URL.
+The logical ID is found as the result of a search.</p>
+<pre><code class="lang-bash hljs">GET https://tw171.open.allscripts.com/FHIR/Patient/id/Goal
+GET https://tw171.open.allscripts.com/FHIR/Patient/id/Goal?date=eq2016-01-01
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required?</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>yes</td>
+<td>URL</td>
+<td>The logical ID of the patient.  This is retrieved using the search function.</td>
+</tr>
+<tr>
+<td>date</td>
+<td>no</td>
+<td>string</td>
+<td>A string representing a date to include in the search.  See below for more information.</td>
+</tr>
+</tbody>
+</table>
+<p>A DAF Goal is retuned</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>identifier</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Identifier" target="_blank"></a></td>
+<td>0..*</td>
+<td>External ID for this goal. This is a business identifier, not a resource identifier. This records identifiers associated with this care plan that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (for example, in CDA documents, or in written/printed documentation).</td>
+</tr>
+<tr>
+<td>subject</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Patient.html" target="_blank">Patient</a>, <a href="https://www.hl7.org/fhir/Group.html" target="_blank">Group</a>, <a href="https://www.hl7.org/fhir/Organization.html" target="_blank">Organization</a>)</td>
+<td>0..1</td>
+<td>Who the goal is intended for. Subject identifies the patient, group, or organization for whom the goal is being established, typically the patient. Subject is optional to support anonymized reporting.</td>
+</tr>
+<tr>
+<td>startDate</td>
+<td>Date</td>
+<td>0..1</td>
+<td>When the goal pursuit begins. A date or partial date (for example, just year or year + month) as used in human communication. There is no time zone. Dates shall be valid dates.</td>
+</tr>
+<tr>
+<td>startCodeableConcept</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>When the goal pursuit begins. This option is a codable concept that identifies types of events that might trigger the start of a goal as defined in <a href="http://snomed.info/sct">http://snomed.info/sct</a>. For example, Admission to the hospital (32485007), Childbirth (386216000), or Completion time of procedure (442137000).</td>
+</tr>
+<tr>
+<td>targetDate</td>
+<td>Date</td>
+<td>0..1</td>
+<td>Reach goal on or before. Indicates either the date or the duration after the start by which the goal should be met. This identifies when the goal should be evaluated. This can be a target date (or partial) or a duration of time.</td>
+</tr>
+<tr>
+<td>targetQuantity</td>
+<td>Quantity</td>
+<td>0..1</td>
+<td>Reach goal on or before. Indicates either the date or the duration after start by which the goal should be met. This identifies when the goal should be evaluated. This can be a target date (or partial) or a duration of time.</td>
+</tr>
+<tr>
+<td>category</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..*</td>
+<td>Indicates a category the goal falls within, and allows goals to be filtered and sorted based on a particular category. Examples of category include: Treatment, Dietary, or Behavioral. For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/goal-category">http://hl7.org/fhir/ValueSet/goal-category</a>.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td>1..1</td>
+<td>Desired outcome. This is a human-readable description of a specific desired objective of care. Without a description of what’s trying to be achieved, the element has no purpose.</td>
+</tr>
+<tr>
+<td>status</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#code" target="_blank">code</a></td>
+<td>1..1</td>
+<td>Indicates whether the goal has been reached and is still considered relevant. Options include: Proposed, Planned, Accepted, Rejected, In-progress, Achieved, Sustaining, On-hold, and Cancelled. For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/goal-status">http://hl7.org/fhir/ValueSet/goal-status</a>.</td>
+</tr>
+<tr>
+<td>statusDate</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#date" target="_blank">date</a>)</td>
+<td>0..1</td>
+<td>When goal status took effect. This identifies the current status. For example, when the goal was initially created, when the goal was achieved, when the goal was cancelled, and so on.</td>
+</tr>
+<tr>
+<td>statusReason</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Captures the reason for the current status. This is typically captured for statuses such as Rejected, On-hold, or Cancelled but could be present for others. Conformance is set as example. For more information on this value set, see: <a href="http://hl7.org/fhir/ValueSet/goal-status-reason">http://hl7.org/fhir/ValueSet/goal-status-reason</a>.</td>
+</tr>
+<tr>
+<td>author</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Patient.html" target="_blank"> Patient, Practitioner- https://www.hl7.org/fhir/Practitioner.html or Related Person-  https://www.hl7.org/fhir/RelatedPerson.html</a></td>
+<td>0..1</td>
+<td>Who is responsible for creating the goal. This indicates whose goal this is: patient goal, practitioner goal, related person goal, and so on. This is the individual responsible for establishing the goal, not necessarily who recorded it. (For that, use the provenance resource.)</td>
+</tr>
+<tr>
+<td>priority</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Identifies the mutually agreed level of importance associated with reaching and/or sustaining the goal. This is used for sorting and presenting goals. Extensions are available to track priorities as established by each participant. For example, priority from the patient’s perspective, different practitioners’ perspectives, or family member’s perspectives. The ordinal extension on coding can be used to convey a numerically comparable ranking to priority. Conformance is preferred and defines the following codes: High, Medium, and Low. Different coding systems may use “low value=important.” For more information on this value set, see: <a href="http://hl7.org/fhir/ValueSet/goal-priority">http://hl7.org/fhir/ValueSet/goal-priority</a>.</td>
+</tr>
+<tr>
+<td>addresses</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Condition.html" target="_blank">Condition</a>, <a href="https://www.hl7.org/fhir/Observation.html" target="_blank">Observation</a>, <a href="https://www.hl7.org/fhir/MedicationStatement.html" target="_blank">MedicationStatement</a>, <a href="https://www.hl7.org/fhir/NutritionOrder.html" target="_blank">NutritionOrder</a>, <a href="https://www.hl7.org/fhir/ProcedureRequest.html" target="_blank">ProcedureRequest</a>, <a href="https://www.hl7.org/fhir/RiskAssessment.html" target="_blank">RiskAssessment</a>)</td>
+<td>0..*</td>
+<td>Identified conditions and other health record elements that are intended to be addressed by the goal. This allows specific goals to be explicitly linked to the concerns they’re dealing with which makes the goal more understandable. Reference profiles include: Condition, Observation, MedicationStatement, NutritionOrder, ProcedureRequest, and RiskAssessment.</td>
+</tr>
+<tr>
+<td>note</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Annotation" target="_blank">Annotation</a></td>
+<td>0..*</td>
+<td>Comments or annotation about the goal. Must capture information about the goal that doesn’t actually describe the goal. May be used for progress notes, concerns, or other related information that doesn’t actually describe the goal itself. This is also an MU requirement, which determines the narrative portion of the goal.</td>
+</tr>
+<tr>
+<td>outcome</td>
+<td></td>
+<td>0..*</td>
+<td>The end result of goal. Outcome identifies the change (or lack of change) at the point where the goal was deemed to be cancelled or achieved.  Outcome tracking is a key aspect of care planning. Note that this should not duplicate the goal status.</td>
+</tr>
+<tr>
+<td>– outcome.resultCodeableConcept</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Code or observation that resulted from goal.</td>
+</tr>
+<tr>
+<td>– outcome.resultReference</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/Observation.html" target="_blank">Observation</a>)</td>
+<td>0..1</td>
+<td>Code or observation that resulted from the goal. This describes what has or has not changed.  GoalOutcome: The result of the goal. For example, “25% increase in shoulder mobility,” “Anxiety reduced to moderate levels,” or “15 kg weight loss sustained over 6 months.”</td>
+</tr>
+</tbody>
+</table>
+<h3 id="searching-by-date">Searching by date</h3>
+<p>Dates are passed as query parameters on the URL. Since the URL parameters cannot handle comparators (for example, &gt;, &lt;=) these are passed in as part of the date.</p>
+<pre><code class="lang-javascript hljs">date=eq2016<span class="hljs-number">-01</span><span class="hljs-number">-01</span>
+date=gt2016<span class="hljs-number">-01</span><span class="hljs-number">-01</span>
+</code></pre>
+<p>The following comparators are supported:</p>
+<table>
+<thead>
+<tr>
+<th>Comparator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eq</td>
+<td>equal</td>
+</tr>
+<tr>
+<td>gt</td>
+<td>greater than</td>
+</tr>
+<tr>
+<td>ge</td>
+<td>greater than or equal</td>
+</tr>
+<tr>
+<td>lt</td>
+<td>less than</td>
+</tr>
+<tr>
+<td>le</td>
+<td>less than or equal</td>
+</tr>
+</tbody>
+</table>
+<p>To search for a date range, pass in the date twice.</p>
+<p>e.g. <code>date=ge2010-01-01&amp;date=le2010-12-31</code></p>
+<p>This search would include every day in the year 2010.</p>
+
+    </div>
+
+
+</body></html>

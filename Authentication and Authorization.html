@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!-- saved from url=(0087)https://developer.allscripts.com/Content/fhir/content/Authentication_and_Authorization/ -->
+<html lang="en" class="gr__developer_allscripts_com" sigplusextliteextension-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">    
+    <title>Authentication and Authorization</title>
+	<link rel="stylesheet" type="text/css" href="./Authentication and Authorization_files/main.css">
+    <link rel="stylesheet" href="./Authentication and Authorization_files/default.min.css">
+    <script src="./Authentication and Authorization_files/highlight.min.js.download"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body data-gr-c-s-loaded="true">
+	<div class="right-sidebar">
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/">   Home</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/overview">   Overview</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Authentication_and_Authorization">   Authentication and Authorization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/patient">   Patient</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Condition">   Condition (Problem)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Immunization">   Immunization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationStatement">   MedicationStatement</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/AllergyIntolerance">   AllergyIntolerance</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/SmokingStatus">   SmokingStatus</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationOrder">   MedicationOrder</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Results">   Laboratory Result Observationss</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/VitalSigns">   VitalSign</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Procedure">   Procedure</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Assessment_and_plan">   Assessment and Plan of Treatment</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/CareTeam">   Care Team</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DiagnosticReport">   Laboratory Result DiagnosticReport</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Goal">   Goal</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Device">   Implantable Devices/UDI</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DocumentReference">   DocumentReference (CCDA)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HealthConcern">   Health Concern</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HowDoPatientsLogin">   How Do Patients Log In</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Developer_Signup">   Developer Signup</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/FHIR_Sandboxes">   Sandboxes</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Smart%20on%20FHIR">   SMART on FHIR</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/REST_and_HTTP_considerations">   REST and HTTP considerations</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Helpful_resources">   Helpful resources</a>
+ 			</div>
+    </div>
+
+   <div class="content">
+        <h1 id="authorization-flow">Authorization flow</h1>
+<p>The Allscripts FHIR API uses OAuth 2 and Open ID Connect. It is based on the Smart Authorization description.</p>
+<p>References:</p>
+<ul>
+<li><a href="http://tools.ietf.org/html/rfc6749" target="_blank">OAuth 2</a></li>
+<li><a href="http://openid.net/specs/openid-authentication-2_0.html" target="_blank">OpenID Connect</a></li>
+<li><a href="http://docs.smartplatforms.org/authorization/" target="_blank">Smart</a></li>
+</ul>
+<p>The authorization code grant type is the only grant type supported in this release because it is considered secure.
+Other grant types, such as implicit flow, may be supported in future as the standards evolve.</p>
+<p>The following diagram (from Smart) describes the authorization code flow:</p>
+<p><img src="./Authentication and Authorization_files/Smart_Authorization.png" alt="Smart_Authorization"></p>
+<p>Once the patient or provider (hereafter referred to as the user) launches the app, you must authenticate the user by calling the authorize endpoint on the authorization server used by the EHR.</p>
+<p>During the authentication step, provide the app’s client_id, but not the secret.</p>
+<blockquote>
+<p>Note that the examples here illustrate what is happening. It is not recommended that you code an OAuth client yourself. For suggestions on OAuth clients, see <a href="http://oauth.net/2/" target="_blank">link.</a></p>
+</blockquote>
+<pre><code class="lang-http hljs"><span class="hljs-attribute">GET https://tw171.open.allscripts.com/authorization/connect/authorize?response_type=code&amp;client_id=d34d06b8-63ff-414b-a93c-11dc998f54e1&amp;redirect_uri=http://localhost:8000/launch.html&amp;scope=launch%20openid%20profile
+</span></code></pre>
+<p>The <code>redirect_uri</code> <code>urn:ietf:wg:oauth:2.0:oob</code> is a special URL that is used in desktop clients.  If you are developing a web client, you will use a URL pointing back to your website.</p>
+<p>During the On Approval step, the user will be asked to log in. If they do not have credentials, they will be asked to confirm their identity before creating credentials.
+If this is the first time they have used the app, they will be asked to confirm that they want to use the application (authorizing the application).</p>
+<p>After the user authenticates, you will receive an authorization code. You send the authorization code, along with the client_secret, to the token endpoint of the authorization server.</p>
+<pre><code class="lang-http hljs"><span class="hljs-attribute">POST https://tw171.open.allscripts.com/authorization/connect/token
+    code    f53e501a51f2909d1f7ac5dd0d148c46
+    redirect_uri    urn:ietf:wg:oauth:2.0:oob
+    client_id    C85533AE-E3A4-455C-BE5C-DAC0F695408F
+    scope    patient/*.read
+    client_secret    supersecret
+    grant_type    authorization_code
+</span></code></pre>
+<p>The server returns the access token which the app then uses in subsequent calls to the API.</p>
+<pre><code class="lang-javascript hljs">{
+    <span class="hljs-string">"access_token"</span> :  <span class="hljs-number">123.456</span><span class="hljs-number">.7890</span>
+    <span class="hljs-string">"expires_in"</span>: <span class="hljs-number">1200</span>,
+    <span class="hljs-string">"token_type"</span>: <span class="hljs-string">"Bearer"</span>    
+}
+</code></pre>
+<h2 id="scopes">Scopes</h2>
+<p>The Allscripts FHIR API authorization server uses the scopes defined for <a href="http://docs.smarthealthit.org/authorization/scopes-and-launch-context/" target="_blank">Smart on FHIR</a>.</p>
+<h2 id="confidential-and-public-clients">Confidential and public clients</h2>
+<p>The Allscripts FHIR API supports two type of clients: confidential clients and public clients.</p>
+<p>Confidential clients are clients that can be trusted to keep the client_secret secure.
+Examples of confidential clients include: </p>
+<ul>
+<li>Web clients written as server side HTML and where the client secret is stored on the server</li>
+<li>Mobile clients written in the native technology of the platform</li>
+</ul>
+<p>Public clients cannot be trusted to keep the secret safe.</p>
+<h2 id="using-a-refresh-token">Using a refresh token</h2>
+<p>To prevent a user from having to log in whenever the access token expires, use a refresh token. The refresh token will be valid for <n> hours/days.</n></p>
+<p>To get a new access token, call the token endpoint of the authorization server and present your bearer token.</p>
+<p>If the bearer token has expired, you must call the authorization endpoint of the authorization server again so the user can login using their credentials.</p>
+<h2 id="authorization-for-patient-access">Authorization for patient access</h2>
+<p>Certain resources and operation on the Allscripts FHIR API are not specific to a patient. For example, searching for a patient.</p>
+<p>However, most API calls are patient specific. For example, retrieving patient demographics or problems.</p>
+<p>In those cases the following authorization rules apply:</p>
+<ul>
+<li>If the user is a patient:<ul>
+<li>They have access to their own data.</li>
+<li>They have access to patients for whom they are caregivers or guardian.</li>
+<li>They will not have access to the data for any other patients.</li>
+</ul>
+</li>
+<li>If the user is a provider or other EHR user:<ul>
+<li>They only have access to patients they are authorized to see in their EHR.</li>
+<li>They do not have access to patients they are not authorized to see in their EHR.</li>
+<li>Apps do not have access to the “break glass” privilege escalation functionality.</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+
+</body></html>

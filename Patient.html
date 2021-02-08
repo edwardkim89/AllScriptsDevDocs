@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://developer.allscripts.com/Content/fhir/content/patient/ -->
+<html lang="en" class="gr__developer_allscripts_com" sigplusextliteextension-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">    
+    <title>Patient</title>
+	<link rel="stylesheet" type="text/css" href="./Patient_files/main.css">
+    <link rel="stylesheet" href="./Patient_files/default.min.css">
+    <script src="./Patient_files/highlight.min.js.download"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body data-gr-c-s-loaded="true">
+	<div class="right-sidebar">
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/">   Home</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/overview">   Overview</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Authentication_and_Authorization">   Authentication and Authorization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/patient">   Patient</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Condition">   Condition (Problem)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Immunization">   Immunization</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationStatement">   MedicationStatement</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/AllergyIntolerance">   AllergyIntolerance</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/SmokingStatus">   SmokingStatus</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/MedicationOrder">   MedicationOrder</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Results">   Laboratory Result Observationss</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/VitalSigns">   VitalSign</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Procedure">   Procedure</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Assessment_and_plan">   Assessment and Plan of Treatment</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/CareTeam">   Care Team</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DiagnosticReport">   Laboratory Result DiagnosticReport</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Goal">   Goal</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Device">   Implantable Devices/UDI</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/DocumentReference">   DocumentReference (CCDA)</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HealthConcern">   Health Concern</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/HowDoPatientsLogin">   How Do Patients Log In</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Developer_Signup">   Developer Signup</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/FHIR_Sandboxes">   Sandboxes</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Smart%20on%20FHIR">   SMART on FHIR</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/REST_and_HTTP_considerations">   REST and HTTP considerations</a>
+ 			</div>
+			<div class="sidebar-line">
+ 				<a class="sidebar-item" href="https://developer.allscripts.com/Content/fhir/content/Helpful_resources">   Helpful resources</a>
+ 			</div>
+    </div>
+
+   <div class="content">
+        <h1 id="searching-for-a-patient">Searching for a patient</h1>
+<pre><code class="lang-bash hljs">GET https://tw171.open.allscripts.com/FHIR/Patient?given=Allison  
+GET https://tw171.open.allscripts.com/FHIR/Patient?given=Allison&amp;gender=female 
+GET https://tw171.open.allscripts.com/FHIR/Patient?given=Allison&amp;gender=female&amp;birthdate=1973-03-05
+</code></pre>
+<p>The following parameters are specified in the search query:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required?</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>No</td>
+<td>string</td>
+<td>Portion of either the family or given name of the patient.</td>
+</tr>
+<tr>
+<td>_id</td>
+<td>No</td>
+<td>string</td>
+<td>Logical ID of the patient.</td>
+</tr>
+<tr>
+<td>family</td>
+<td>No</td>
+<td>string</td>
+<td>Portion of the family (last) name of the patient.</td>
+</tr>
+<tr>
+<td>given</td>
+<td>No</td>
+<td>string</td>
+<td>Portion of the given (first) name of the patient.</td>
+</tr>
+<tr>
+<td>gender</td>
+<td>No</td>
+<td><a href="http://hl7.org/fhir/DSTU2/search.html#token" target="_blank">token</a></td>
+<td>Patient’s gender. For more information on this value set, see <a href="https://www.hl7.org/fhir/valueset-administrative-gender.html" target="_blank">Administrative Gender ValueSet</a>.</td>
+</tr>
+<tr>
+<td>birthdate</td>
+<td>No</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#date" target="_blank">date</a></td>
+<td>Patient’s date of birth.</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td>No</td>
+<td><a href="http://hl7.org/fhir/DSTU2/search.html#token" target="_blank">token</a></td>
+<td>Patient’s identifier. For example, MRN.</td>
+</tr>
+</tbody>
+</table>
+<p>The response is similar to the following:</p>
+<pre><code class="lang-javascript hljs">{
+<span class="hljs-string">"resourceType"</span>: <span class="hljs-string">"Bundle"</span>,
+<span class="hljs-string">"type"</span>: <span class="hljs-string">"searchset"</span>,
+<span class="hljs-string">"entry"</span>:[
+    {
+        <span class="hljs-string">"resource"</span>:{<span class="hljs-string">"resourceType"</span>: <span class="hljs-string">"Patient"</span>, <span class="hljs-string">"id"</span>: <span class="hljs-string">"47675"</span>, <span class="hljs-string">"language"</span>: <span class="hljs-string">""</span>, <span class="hljs-string">"text"</span>:{<span class="hljs-string">"status"</span>: <span class="hljs-string">"generated"</span>,…}
+    },
+    {
+        <span class="hljs-string">"resource"</span>:{<span class="hljs-string">"resourceType"</span>: <span class="hljs-string">"Patient"</span>, <span class="hljs-string">"id"</span>: <span class="hljs-string">"1556"</span>, <span class="hljs-string">"language"</span>: <span class="hljs-string">""</span>, <span class="hljs-string">"text"</span>:{<span class="hljs-string">"status"</span>: <span class="hljs-string">"generated"</span>,…}
+    },
+    {
+        <span class="hljs-string">"resource"</span>:{<span class="hljs-string">"resourceType"</span>: <span class="hljs-string">"Patient"</span>, <span class="hljs-string">"id"</span>: <span class="hljs-string">"27190"</span>, <span class="hljs-string">"language"</span>: <span class="hljs-string">""</span>, <span class="hljs-string">"text"</span>:{<span class="hljs-string">"status"</span>: <span class="hljs-string">"generated"</span>,…}
+    },
+    {
+        <span class="hljs-string">"resource"</span>:{<span class="hljs-string">"resourceType"</span>: <span class="hljs-string">"Patient"</span>, <span class="hljs-string">"id"</span>: <span class="hljs-string">"36530"</span>, <span class="hljs-string">"language"</span>: <span class="hljs-string">""</span>, <span class="hljs-string">"text"</span>:{<span class="hljs-string">"status"</span>: <span class="hljs-string">"generated"</span>,…}
+    }
+]}
+</code></pre>
+<h2 id="searching-for-a-patient-id">Searching for a patient ID</h2>
+<p>A patient ID can be used to query for additional information. The search function is described in the previous section.</p>
+<p>If the response returns one or more patients, the response contains the patient ID (or patient IDs).</p>
+<p>{
+“resourceType”: “Bundle”,
+“type”: “searchset”,
+“entry”:[
+    {
+        “resource”:{“resourceType”: “Patient”, <span class="highlight-background">“id”:<span class="highlight-foreground">“47675”</span></span>, “language”: “”, “text”:{“status”: “generated”,…}
+    }
+]}</p>
+<p>You can use the highlighted ID (47675 in this example) in subsequent requests.</p>
+<h1 id="retrieving-a-patient">Retrieving a patient</h1>
+<p>The patient’s logical ID used to retrieve the patient is passed as part of the URL.
+The logical ID is found as the result of a search.</p>
+<pre><code class="lang-bash hljs">GET https://tw171.open.allscripts.com/FHIR/Patient/id
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required?</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>yes</td>
+<td>URL</td>
+<td>Patient’s logical ID. This is retrieved using the search function.</td>
+</tr>
+</tbody>
+</table>
+<p>A <a href="https://www.hl7.org/fhir/daf/patient-daf.html" target="_blank">DAF Patient</a> is returned.</p>
+<p>The following table describes the information returned for an individual or animal receiving health care services:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>identifier</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Identifier" target="_blank">Identifier</a></td>
+<td>0..*</td>
+<td>Patient’s identifier. Patients are usually assigned a specific numerical identifier that is unique within the system.</td>
+</tr>
+<tr>
+<td>active</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#boolean" target="_blank">boolean</a></td>
+<td>0..1</td>
+<td>Is the patient’s record active? The default value is true. Need to be able to mark a patient record as not to be used because it was created in error. If a record is inactive, and linked to an active record, then future patient/record updates should occur on the other patient.</td>
+</tr>
+<tr>
+<td>name</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#HumanName" target="_blank">HumanName</a></td>
+<td>0..*</td>
+<td>Name associated with the patient.</td>
+</tr>
+<tr>
+<td>telecom</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#ContactPoint" target="_blank">ContactPoint</a></td>
+<td>0..*</td>
+<td>Patient contact communication detail. This indicates the value in any kind of telecom details field for the patient. If capturing a phone, fax, or similar contact point, the value is a properly formatted telephone number according to ITU-T E.123. However, this is frequently not possible due to legacy data and/or clerical practices when recording contact details. For this reason, phone, fax, page, and email addresses are not handled as formal URLs.</td>
+</tr>
+<tr>
+<td>gender</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#code" target="_blank">code</a></td>
+<td>0..1</td>
+<td>Patient’s gender. Returns Male, Female, Other, or Unknown. For more information on this value set, see <a href="https://www.hl7.org/fhir/valueset-administrative-gender.html" target="_blank">Administrative Gender ValueSet</a>.</td>
+</tr>
+<tr>
+<td>birthDate</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#date" target="_blank">date</a></td>
+<td>0..1</td>
+<td>Patient’s date of birth. This indicates a specific calendar date or partial date (either a year or a month and year combination). Time zone is not included. Fuzzy (approximate) dates are not valid.</td>
+</tr>
+<tr>
+<td>deceasedBoolean</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#boolean" target="_blank">boolean</a></td>
+<td>0..1</td>
+<td>Is the patient deceased? If a patient is deceased, it influences the clinical process and human communication. If this value is blank, most systems interpret the missing information as an indication that the patient is alive.</td>
+</tr>
+<tr>
+<td>address</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Address" target="_blank">Address</a></td>
+<td>0..*</td>
+<td>Patient’s postal address. Postal addresses are often used to record a location that can be visited to find a patient or person.</td>
+</tr>
+<tr>
+<td>maritalStatus</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Patient marital (civil) status. For more information on this value set, see <a href="https://www.hl7.org/fhir/valueset-marital-status.html" target="_blank">Marital Status Codes</a>.</td>
+</tr>
+<tr>
+<td>multipleBirthBoolean</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#boolean" target="_blank">boolean</a></td>
+<td>0..1</td>
+<td>Was the patient part of a multiple birth?</td>
+</tr>
+<tr>
+<td>contact</td>
+<td></td>
+<td>0..*</td>
+<td>Patient’s contact party. For example, Guardian, Partner, or Friend).</td>
+</tr>
+<tr>
+<td>– contact.relationship</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..*</td>
+<td>Patient contact’s relationship with the patient. For more information on this value set, see <a href="http://hl7.org/fhir/ValueSet/patient-contact-relationship" target="_blank">patient-contact-relationship</a>.</td>
+</tr>
+<tr>
+<td>– contact.name</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#HumanName" target="_blank">HumanName</a></td>
+<td>0..1</td>
+<td>Patient contact’s name.</td>
+</tr>
+<tr>
+<td>– contact.telecom</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#ContactPoint" target="_blank">ContactPoint</a></td>
+<td>0..*</td>
+<td>Patient contact’s detailed information.</td>
+</tr>
+<tr>
+<td>– contact.address</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#Address" target="_blank">Address</a></td>
+<td>0..1</td>
+<td>Patient contact’s address.</td>
+</tr>
+<tr>
+<td>communication.language</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..*</td>
+<td>Language used to communicate with the patient about his or her health. For more information on this value set, see <a href="http://tools.ietf.org/html/bcp47" target="_blank">Language ValueSet</a>.</td>
+</tr>
+<tr>
+<td>careProvider</td>
+<td><a href="https://www.hl7.org/fhir/references.html" target="_blank">Reference</a>(<a href="https://www.hl7.org/fhir/daf/daf-pract.html" target="_blank">Practitioner</a>)</td>
+<td>0..*</td>
+<td>Patient’s nominated primary care provider.</td>
+</tr>
+<tr>
+<td>us-core-race</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Patient’s race (category of humans sharing history, origin, or nationality). For more information on this value set, see <a href="https://www.hl7.org/fhir/daf/valueset-daf-race.html" target="_blank">DAF Race ValueSet&lt;/a.</a></td>
+</tr>
+<tr>
+<td>us-core-ethnicitye</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Patient’s ethnicity (category of humans sharing heritage). For more information on this value set, see <a href="https://www.hl7.org/fhir/daf/valueset-daf-ethnicity.html" target="_blank">Ethnicity group</a>.</td>
+</tr>
+<tr>
+<td>us-core-religion</td>
+<td><a href="https://www.hl7.org/fhir/datatypes.html#CodeableConcept" target="_blank">CodeableConcept</a></td>
+<td>0..1</td>
+<td>Patient’s professed religious affiliation. For more information on this value set, see <a href="https://www.hl7.org/fhir/extension-us-core-religion.html" target="_blank">v3 Code System ReligiousAffiliation</a>.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-javascript hljs">{
+   <span class="hljs-string">"resourceType"</span>: <span class="hljs-string">"Bundle"</span>,
+   <span class="hljs-string">"type"</span>: <span class="hljs-string">"searchset"</span>,
+   <span class="hljs-string">"entry"</span>: [{<span class="hljs-string">"resource"</span>:    {
+      <span class="hljs-string">"resourceType"</span>: <span class="hljs-string">"Patient"</span>,
+      <span class="hljs-string">"id"</span>: <span class="hljs-string">"19"</span>,
+      <span class="hljs-string">"extension"</span>:       [
+                  {
+            <span class="hljs-string">"url"</span>: <span class="hljs-string">"http://hl7.org/fhir/StructureDefinition/us-core-race"</span>,
+            <span class="hljs-string">"valueCodeableConcept"</span>: {<span class="hljs-string">"coding"</span>: [            {
+               <span class="hljs-string">"system"</span>: <span class="hljs-string">"OBM"</span>,
+               <span class="hljs-string">"code"</span>: <span class="hljs-string">"0"</span>,
+               <span class="hljs-string">"display"</span>: <span class="hljs-string">" "</span>
+            }]}
+         },
+                  {
+            <span class="hljs-string">"url"</span>: <span class="hljs-string">"http://hl7.org/fhir/StructureDefinition/us-core-ethnicity"</span>,
+            <span class="hljs-string">"valueCodeableConcept"</span>: {<span class="hljs-string">"coding"</span>: [            {
+               <span class="hljs-string">"system"</span>: <span class="hljs-string">"OBM"</span>,
+               <span class="hljs-string">"code"</span>: <span class="hljs-string">"0"</span>,
+               <span class="hljs-string">"display"</span>: <span class="hljs-string">""</span>
+            }]}
+         },
+                  {
+            <span class="hljs-string">"url"</span>: <span class="hljs-string">"http://hl7.org/fhir/StructureDefinition/us-core-religion"</span>,
+            <span class="hljs-string">"valueCodeableConcept"</span>: {<span class="hljs-string">"coding"</span>: [            {
+               <span class="hljs-string">"code"</span>: <span class="hljs-string">"          "</span>,
+               <span class="hljs-string">"display"</span>: <span class="hljs-string">" "</span>
+            }]}
+         }
+      ],
+      <span class="hljs-string">"identifier"</span>: [      {
+         <span class="hljs-string">"type"</span>:          {
+            <span class="hljs-string">"coding"</span>:             [
+                              {
+                  <span class="hljs-string">"code"</span>: <span class="hljs-string">"ZZZTW01"</span>,
+                  <span class="hljs-string">"display"</span>: <span class="hljs-string">"ZZZTW01"</span>,
+                  <span class="hljs-string">"userSelected"</span>: <span class="hljs-literal">false</span>
+               },
+                              {
+                  <span class="hljs-string">"code"</span>: <span class="hljs-string">"4         "</span>,
+                  <span class="hljs-string">"display"</span>: <span class="hljs-string">"Other"</span>,
+                  <span class="hljs-string">"userSelected"</span>: <span class="hljs-literal">false</span>
+               }
+            ],
+            <span class="hljs-string">"text"</span>: <span class="hljs-string">"TouchWorks MRN"</span>
+         },
+         <span class="hljs-string">"system"</span>: <span class="hljs-string">"dummy identifier system"</span>,
+         <span class="hljs-string">"value"</span>: <span class="hljs-string">"ZZZTW01"</span>,
+         <span class="hljs-string">"assigner"</span>: {<span class="hljs-string">"reference"</span>: <span class="hljs-string">"Organization/3"</span>}
+      }],
+      <span class="hljs-string">"active"</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-string">"name"</span>: [      {
+         <span class="hljs-string">"text"</span>: <span class="hljs-string">"Allscripts,Allison "</span>,
+         <span class="hljs-string">"family"</span>: [<span class="hljs-string">"Allscripts"</span>],
+         <span class="hljs-string">"given"</span>: [<span class="hljs-string">"Allison"</span>],
+         <span class="hljs-string">"prefix"</span>: [<span class="hljs-string">"     "</span>],
+         <span class="hljs-string">"suffix"</span>: [<span class="hljs-string">"     "</span>]
+      }],
+      <span class="hljs-string">"telecom"</span>:       [
+                  {
+            <span class="hljs-string">"system"</span>: <span class="hljs-string">"phone"</span>,
+            <span class="hljs-string">"value"</span>: <span class="hljs-string">"(312) 555-1112"</span>,
+            <span class="hljs-string">"use"</span>: <span class="hljs-string">"home"</span>
+         },
+                  {
+            <span class="hljs-string">"system"</span>: <span class="hljs-string">"phone"</span>,
+            <span class="hljs-string">"value"</span>: <span class="hljs-string">"(847) 608-3515x4357 "</span>,
+            <span class="hljs-string">"use"</span>: <span class="hljs-string">"work"</span>
+         },
+                  {
+            <span class="hljs-string">"system"</span>: <span class="hljs-string">"fax"</span>,
+            <span class="hljs-string">"value"</span>: <span class="hljs-string">"(708) 555-1001"</span>
+         },
+                  {
+            <span class="hljs-string">"system"</span>: <span class="hljs-string">"email"</span>,
+            <span class="hljs-string">"value"</span>: <span class="hljs-string">"allison@allscripts.com"</span>
+         }
+      ],
+      <span class="hljs-string">"gender"</span>: <span class="hljs-string">"female"</span>,
+      <span class="hljs-string">"birthDate"</span>: <span class="hljs-string">"1973-03-05"</span>,
+      <span class="hljs-string">"deceasedBoolean"</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-string">"address"</span>: [      {
+         <span class="hljs-string">"text"</span>: <span class="hljs-string">"34 Smith Mt. Road. Apartment 1 Springfield IL 60654      USA"</span>,
+         <span class="hljs-string">"line"</span>:          [
+            <span class="hljs-string">"34 Smith Mt. Road."</span>,
+            <span class="hljs-string">"Apartment 1"</span>
+         ],
+         <span class="hljs-string">"city"</span>: <span class="hljs-string">"Springfield"</span>,
+         <span class="hljs-string">"state"</span>: <span class="hljs-string">"IL"</span>,
+         <span class="hljs-string">"postalCode"</span>: <span class="hljs-string">"60654     "</span>,
+         <span class="hljs-string">"country"</span>: <span class="hljs-string">"USA"</span>
+      }],
+      <span class="hljs-string">"maritalStatus"</span>: {<span class="hljs-string">"coding"</span>: [      {
+         <span class="hljs-string">"system"</span>: <span class="hljs-string">"http://hl7.org/fhir/v3/vs/MaritalStatus"</span>,
+         <span class="hljs-string">"code"</span>: <span class="hljs-string">"W"</span>,
+         <span class="hljs-string">"display"</span>: <span class="hljs-string">"Widowed"</span>
+      }]},
+      <span class="hljs-string">"multipleBirthBoolean"</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-string">"contact"</span>:       [
+                  {
+            <span class="hljs-string">"relationship"</span>: [{<span class="hljs-string">"coding"</span>: [            {
+               <span class="hljs-string">"code"</span>: <span class="hljs-string">"4         "</span>,
+               <span class="hljs-string">"display"</span>: <span class="hljs-string">"Other"</span>
+            }]}],
+            <span class="hljs-string">"name"</span>:             {
+               <span class="hljs-string">"text"</span>: <span class="hljs-string">"Washington George"</span>,
+               <span class="hljs-string">"family"</span>: [<span class="hljs-string">"Washington"</span>],
+               <span class="hljs-string">"given"</span>: [<span class="hljs-string">"George"</span>]
+            },
+            <span class="hljs-string">"telecom"</span>:             [
+                              {
+                  <span class="hljs-string">"system"</span>: <span class="hljs-string">"other"</span>,
+                  <span class="hljs-string">"value"</span>: <span class="hljs-string">"(312) 555-1101"</span>,
+                  <span class="hljs-string">"use"</span>: <span class="hljs-string">"home"</span>
+               },
+                              {
+                  <span class="hljs-string">"system"</span>: <span class="hljs-string">"other"</span>,
+                  <span class="hljs-string">"value"</span>: <span class="hljs-string">"(773) 555-1201x1101"</span>,
+                  <span class="hljs-string">"use"</span>: <span class="hljs-string">"work"</span>
+               }
+            ],
+            <span class="hljs-string">"address"</span>:             {
+               <span class="hljs-string">"line"</span>:                [
+                  <span class="hljs-string">"123 Waulnut Street"</span>,
+                  <span class="hljs-string">"Apartment 2E"</span>
+               ],
+               <span class="hljs-string">"city"</span>: <span class="hljs-string">"dummy address city"</span>,
+               <span class="hljs-string">"state"</span>: <span class="hljs-string">"dummy address state"</span>,
+               <span class="hljs-string">"postalCode"</span>: <span class="hljs-string">"dummy address postal code"</span>,
+               <span class="hljs-string">"country"</span>: <span class="hljs-string">"dummy address country"</span>
+            }
+         },
+                  {
+            <span class="hljs-string">"relationship"</span>: [{<span class="hljs-string">"coding"</span>: [            {
+               <span class="hljs-string">"code"</span>: <span class="hljs-string">"4         "</span>,
+               <span class="hljs-string">"display"</span>: <span class="hljs-string">"Other"</span>
+            }]}],
+            <span class="hljs-string">"name"</span>:             {
+               <span class="hljs-string">"text"</span>: <span class="hljs-string">"Adams Abigail"</span>,
+               <span class="hljs-string">"family"</span>: [<span class="hljs-string">"Adams"</span>],
+               <span class="hljs-string">"given"</span>: [<span class="hljs-string">"Abigail"</span>]
+            },
+            <span class="hljs-string">"telecom"</span>:             [
+                              {
+                  <span class="hljs-string">"system"</span>: <span class="hljs-string">"other"</span>,
+                  <span class="hljs-string">"value"</span>: <span class="hljs-string">"(312) 555-7701x8850"</span>,
+                  <span class="hljs-string">"use"</span>: <span class="hljs-string">"work"</span>
+               },
+                              {
+                  <span class="hljs-string">"system"</span>: <span class="hljs-string">"other"</span>,
+                  <span class="hljs-string">"value"</span>: <span class="hljs-string">"(847) 555-9901"</span>,
+                  <span class="hljs-string">"use"</span>: <span class="hljs-string">"home"</span>
+               }
+            ],
+            <span class="hljs-string">"address"</span>:             {
+               <span class="hljs-string">"line"</span>:                [
+                  <span class="hljs-string">"123 Main Street"</span>,
+                  <span class="hljs-string">"Apartment 41"</span>
+               ],
+               <span class="hljs-string">"city"</span>: <span class="hljs-string">"dummy address city"</span>,
+               <span class="hljs-string">"state"</span>: <span class="hljs-string">"dummy address state"</span>,
+               <span class="hljs-string">"postalCode"</span>: <span class="hljs-string">"dummy address postal code"</span>,
+               <span class="hljs-string">"country"</span>: <span class="hljs-string">"dummy address country"</span>
+            }
+         }
+      ],
+      <span class="hljs-string">"communication"</span>: [{<span class="hljs-string">"language"</span>: {<span class="hljs-string">"coding"</span>: [      {
+         <span class="hljs-string">"system"</span>: <span class="hljs-string">"ISO-639-2"</span>,
+         <span class="hljs-string">"code"</span>: <span class="hljs-string">"eng       "</span>,
+         <span class="hljs-string">"display"</span>: <span class="hljs-string">"English"</span>
+      }]}}],
+      <span class="hljs-string">"careProvider"</span>: [      {
+         <span class="hljs-string">"reference"</span>: <span class="hljs-string">"Practitioner/53"</span>,
+         <span class="hljs-string">"display"</span>: <span class="hljs-string">"Allscripts,Family Medicine "</span>
+      }]
+   }}]
+}
+</code></pre>
+
+    </div>
+
+
+</body></html>
